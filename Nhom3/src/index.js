@@ -28,9 +28,6 @@ app.get('/', (req, res) => {
 
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
-app.listen(PORT, async () => {
+app.listen(PORT, () => {
   console.log(`✅ Server chạy tại http://localhost:${PORT}`);
-  const man = await call_ai()
-  console.log(man.content)
- 
 });
