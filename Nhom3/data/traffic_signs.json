@@ -1,188 +1,1490 @@
 [
-  { "id": "P.101", "ma_bien": "P.101", "ten_bien": "Đường cấm", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả các phương tiện đi lại cả hai hướng, trừ xe ưu tiên.", "class_id": 0 },
-  { "id": "P.102", "ma_bien": "P.102", "ten_bien": "Cấm đi ngược chiều", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe đi vào theo chiều đặt biển, trừ xe ưu tiên.", "class_id": 1 },
-  { "id": "P.103a", "ma_bien": "P.103a", "ten_bien": "Cấm xe ô tô", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả các loại xe cơ giới kể cả môtô 3 bánh đi qua, trừ xe máy 2 bánh và xe ưu tiên.", "class_id": 2 },
-  { "id": "P.103b", "ma_bien": "P.103b", "ten_bien": "Cấm xe ô tô rẽ trái", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe cơ giới rẽ trái (kể cả ô tô khách, xe tải), đồng thời cấm quay đầu xe.", "class_id": 3 },
-  { "id": "P.103c", "ma_bien": "P.103c", "ten_bien": "Cấm xe ô tô rẽ phải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe cơ giới rẽ phải tại ngã ba, ngã tư.", "class_id": 4 },
-  { "id": "P.104", "ma_bien": "P.104", "ten_bien": "Cấm xe máy", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe môtô 2 bánh đi qua. Không áp dụng cho xe gắn máy dưới 50cc.", "class_id": 5 },
-  { "id": "P.105", "ma_bien": "P.105", "ten_bien": "Cấm xe ô tô và xe máy", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm cả xe ô tô và xe máy 2 bánh đi qua đoạn đường đặt biển.", "class_id": 6 },
-  { "id": "P.106a", "ma_bien": "P.106a", "ten_bien": "Cấm xe ô tô tải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe tải có khối lượng chuyên chở lớn hơn 1,5 tấn. Cấm luôn cả máy kéo.", "class_id": 7 },
-  { "id": "P.106b", "ma_bien": "P.106b", "ten_bien": "Cấm xe tải trên trị số ghi", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe tải có khối lượng chuyên chở lớn hơn trị số ghi trên biển.", "class_id": 8 },
-  { "id": "P.106c", "ma_bien": "P.106c", "ten_bien": "Cấm xe chở hàng nguy hiểm", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe vận chuyển chất độc hại, chất nổ, hàng nguy hiểm đi qua.", "class_id": 9 },
-  { "id": "P.107", "ma_bien": "P.107", "ten_bien": "Cấm xe ô tô khách và xe ô tô tải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe ô tô chở khách và các loại xe ô tô tải đi qua đoạn đường này.", "class_id": 10 },
-  { "id": "P.107a", "ma_bien": "P.107a", "ten_bien": "Cấm xe ô tô khách", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe ô tô chở khách đi qua, không áp dụng cho xe buýt công cộng.", "class_id": 11 },
-  { "id": "P.107b", "ma_bien": "P.107b", "ten_bien": "Cấm xe ô tô taxi", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe ô tô taxi hoạt động trên đoạn đường này.", "class_id": 12 },
-  { "id": "P.108", "ma_bien": "P.108", "ten_bien": "Cấm xe kéo rơ-moóc", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe cơ giới kéo theo rơ-moóc hoặc máy kéo đi qua.", "class_id": 13 },
-  { "id": "P.108a", "ma_bien": "P.108a", "ten_bien": "Cấm sơ-mi rơ-moóc", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe đầu kéo kéo theo sơ-mi rơ-moóc đi qua.", "class_id": 14 },
-  { "id": "P.109", "ma_bien": "P.109", "ten_bien": "Cấm máy kéo", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả các loại máy kéo, kể cả máy kéo bánh hơi và bánh xích.", "class_id": 15 },
-  { "id": "P.110a", "ma_bien": "P.110a", "ten_bien": "Cấm đi xe đạp", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe đạp đi qua. Không cấm người dắt xe đạp.", "class_id": 16 },
-  { "id": "P.110b", "ma_bien": "P.110b", "ten_bien": "Cấm xe đạp thồ", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe đạp thồ (chở hàng hóa cồng kềnh) đi qua.", "class_id": 17 },
-  { "id": "P.111a", "ma_bien": "P.111a", "ten_bien": "Cấm xe gắn máy", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe gắn máy dưới 50cc đi qua. Biển này không cấm xe môtô phân khối lớn.", "class_id": 18 },
-  { "id": "P.111b", "ma_bien": "P.111b", "ten_bien": "Cấm xe ba bánh có động cơ", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe xích lô máy, xe lôi máy, xe ba gác máy đi qua.", "class_id": 19 },
-  { "id": "P.111c", "ma_bien": "P.111c", "ten_bien": "Cấm xe ba bánh không động cơ", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe xích lô thường, xe ba gác đạp đi qua.", "class_id": 20 },
-  { "id": "P.111d", "ma_bien": "P.111d", "ten_bien": "Cấm xe lôi máy", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe máy kéo theo xe lôi chở khách hoặc hàng.", "class_id": 21 },
-  { "id": "P.112", "ma_bien": "P.112", "ten_bien": "Cấm người đi bộ", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm người đi bộ đi vào đoạn đường này để đảm bảo an toàn.", "class_id": 22 },
-  { "id": "P.113", "ma_bien": "P.113", "ten_bien": "Cấm xe người kéo đẩy", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe thô sơ do người kéo hoặc đẩy đi qua.", "class_id": 23 },
-  { "id": "P.114", "ma_bien": "P.114", "ten_bien": "Cấm xe súc vật kéo", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe do súc vật kéo (ngựa, trâu, bò) di chuyển.", "class_id": 24 },
-  { "id": "P.115", "ma_bien": "P.115", "ten_bien": "Hạn chế tải trọng toàn bộ xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe có tải trọng toàn bộ (cả xe và hàng) vượt quá số trị ghi trên biển.", "class_id": 25 },
-  { "id": "P.116", "ma_bien": "P.116", "ten_bien": "Hạn chế tải trọng trục xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe có tải trọng phân bổ trên một trục xe vượt quá trị số ghi trên biển.", "class_id": 26 },
-  { "id": "P.117", "ma_bien": "P.117", "ten_bien": "Hạn chế chiều cao", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe có chiều cao toàn bộ vượt quá trị số ghi trên biển (thường gặp ở cầu vượt, hầm).", "class_id": 27 },
-  { "id": "P.118", "ma_bien": "P.118", "ten_bien": "Hạn chế chiều rộng", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe có chiều rộng toàn bộ (kể cả hàng hóa) vượt quá trị số ghi trên biển.", "class_id": 28 },
-  { "id": "P.119", "ma_bien": "P.119", "ten_bien": "Hạn chế chiều dài xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe hoặc đoàn xe có chiều dài toàn bộ vượt quá trị số ghi trên biển.", "class_id": 29 },
-  { "id": "P.120", "ma_bien": "P.120", "ten_bien": "Hạn chế chiều dài xe kéo moóc", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe kéo rơ-moóc hoặc sơ-mi rơ-moóc có tổng chiều dài vượt quá trị số.", "class_id": 30 },
-  { "id": "P.121", "ma_bien": "P.121", "ten_bien": "Cự ly tối thiểu giữa hai xe", "loai_bien": "Biển báo cấm", "cong_dung": "Bắt buộc các xe phải giữ khoảng cách an toàn tối thiểu lớn hơn trị số ghi trên biển.", "class_id": 31 },
-  { "id": "P.123a", "ma_bien": "P.123a", "ten_bien": "Cấm rẽ trái", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm rẽ trái tại nút giao. Theo luật mới, biển này không cấm quay đầu xe.", "class_id": 32 },
-  { "id": "P.123b", "ma_bien": "P.123b", "ten_bien": "Cấm rẽ phải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm rẽ phải tại nút giao. Biển này không cấm quay đầu xe.", "class_id": 33 },
-  { "id": "P.124a", "ma_bien": "P.124a", "ten_bien": "Cấm quay đầu xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe quay đầu theo hình chữ U. Biển này không cấm rẽ trái.", "class_id": 34 },
-  { "id": "P.124b", "ma_bien": "P.124b", "ten_bien": "Cấm ô tô quay đầu xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe ô tô quay đầu xe dưới mọi hình thức.", "class_id": 35 },
-  { "id": "P.124c", "ma_bien": "P.124c", "ten_bien": "Cấm rẽ trái và quay đầu xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả phương tiện rẽ trái và đồng thời cấm quay đầu xe.", "class_id": 36 },
-  { "id": "P.124d", "ma_bien": "P.124d", "ten_bien": "Cấm rẽ phải và quay đầu xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả phương tiện rẽ phải và đồng thời cấm quay đầu xe.", "class_id": 37 },
-  { "id": "P.124e", "ma_bien": "P.124e", "ten_bien": "Cấm ô tô rẽ trái và quay đầu", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe ô tô rẽ trái và đồng thời cấm ô tô quay đầu xe.", "class_id": 38 },
-  { "id": "P.124f", "ma_bien": "P.124f", "ten_bien": "Cấm ô tô rẽ phải và quay đầu", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm xe ô tô rẽ phải và đồng thời cấm ô tô quay đầu xe.", "class_id": 39 },
-  { "id": "P.125", "ma_bien": "P.125", "ten_bien": "Cấm vượt", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe cơ giới vượt nhau. Được phép vượt xe máy 2 bánh, xe gắn máy.", "class_id": 40 },
-  { "id": "P.126", "ma_bien": "P.126", "ten_bien": "Cấm xe tải vượt", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe tải có khối lượng lớn hơn 1.5 tấn vượt xe cơ giới khác.", "class_id": 41 },
-  { "id": "P.127", "ma_bien": "P.127", "ten_bien": "Tốc độ tối đa cho phép", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các loại xe chạy quá tốc độ tối đa ghi trên biển (km/h).", "class_id": 42 },
-  { "id": "P.127a", "ma_bien": "P.127a", "ten_bien": "Tốc độ tối đa cho phép ban đêm", "loai_bien": "Biển báo cấm", "cong_dung": "Áp dụng tốc độ tối đa cho phép chạy vào ban đêm (thường từ 22h đến 5h sáng).", "class_id": 43 },
-  { "id": "P.127b", "ma_bien": "P.127b", "ten_bien": "Biển ghép tốc độ tối đa theo làn", "loai_bien": "Biển báo cấm", "cong_dung": "Quy định tốc độ tối đa cho phép chạy trên từng làn đường cụ thể.", "class_id": 44 },
-  { "id": "P.128", "ma_bien": "P.128", "ten_bien": "Cấm sử dụng còi", "loai_bien": "Biển báo cấm", "cong_dung": "Nghiêm cấm các loại xe bóp còi hơi hoặc rú còi trong khu dân cư, đô thị.", "class_id": 45 },
-  { "id": "P.129", "ma_bien": "P.129", "ten_bien": "Kiểm tra", "loai_bien": "Biển báo cấm", "cong_dung": "Bắt buộc các xe phải dừng lại để kiểm tra tại trạm thuế, trạm kiểm soát liên ngành.", "class_id": 46 },
-  { "id": "P.130", "ma_bien": "P.130", "ten_bien": "Cấm dừng xe và đỗ xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe dừng và đỗ ở phía đường đặt biển.", "class_id": 47 },
-  { "id": "P.131a", "ma_bien": "P.131a", "ten_bien": "Cấm đỗ xe", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm các xe đỗ (vẫn được phép dừng nhanh để bốc xếp hoặc trả khách).", "class_id": 48 },
-  { "id": "P.131b", "ma_bien": "P.131b", "ten_bien": "Cấm đỗ xe ngày lẻ", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm đỗ xe vào các ngày dương lịch là số lẻ (1, 3, 5...).", "class_id": 49 },
-  { "id": "P.131c", "ma_bien": "P.131c", "ten_bien": "Cấm đỗ xe ngày chẵn", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm đỗ xe vào các ngày dương lịch là số chẵn (2, 4, 6...).", "class_id": 50 },
-  { "id": "P.132", "ma_bien": "P.132", "ten_bien": "Nhường đường cho xe ngược chiều", "loai_bien": "Biển báo cấm", "cong_dung": "Bắt buộc xe phải nhường đường cho xe cơ giới ngược chiều qua đoạn đường hẹp.", "class_id": 51 },
-  { "id": "DP.133", "ma_bien": "DP.133", "ten_bien": "Hết cấm vượt", "loai_bien": "Biển báo cấm", "cong_dung": "Báo hiệu kết thúc đoạn đường cấm vượt đối với các xe cơ giới.", "class_id": 52 },
-  { "id": "DP.134", "ma_bien": "DP.134", "ten_bien": "Hết hạn chế tốc độ tối đa", "loai_bien": "Biển báo cấm", "cong_dung": "Báo hiệu hết hiệu lực của biển tốc độ tối đa cho phép.", "class_id": 53 },
-  { "id": "DP.135", "ma_bien": "DP.135", "ten_bien": "Hết tất cả các lệnh cấm", "loai_bien": "Biển báo cấm", "cong_dung": "Báo hiệu hết hiệu lực của tất cả các biển cấm đã đặt trước đó.", "class_id": 54 },
-  { "id": "P.137", "ma_bien": "P.137", "ten_bien": "Cấm rẽ trái và rẽ phải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm tất cả phương tiện rẽ sang cả hai phía trái và phải tại ngã rẽ.", "class_id": 55 },
-  { "id": "P.139", "ma_bien": "P.139", "ten_bien": "Cấm đi thẳng và rẽ trái", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm phương tiện đi thẳng và rẽ trái, chỉ được phép rẽ phải.", "class_id": 56 },
-  { "id": "P.140", "ma_bien": "P.140", "ten_bien": "Cấm đi thẳng và rẽ phải", "loai_bien": "Biển báo cấm", "cong_dung": "Cấm phương tiện đi thẳng và rẽ phải, chỉ được phép rẽ trái.", "class_id": 57 },
-  { "id": "W.201a", "ma_bien": "W.201a", "ten_bien": "Chỗ ngoặt nguy hiểm vòng bên trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến chỗ ngoặt nguy hiểm cua gấp về bên trái.", "class_id": 58 },
-  { "id": "W.201b", "ma_bien": "W.201b", "ten_bien": "Chỗ ngoặt nguy hiểm vòng bên phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến chỗ ngoặt nguy hiểm cua gấp về bên phải.", "class_id": 59 },
-  { "id": "W.202a", "ma_bien": "W.202a", "ten_bien": "Nhiều chỗ ngoặt nguy hiểm liên tiếp trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo có từ 2 chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên cua về bên trái.", "class_id": 60 },
-  { "id": "W.202b", "ma_bien": "W.202b", "ten_bien": "Nhiều chỗ ngoặt nguy hiểm liên tiếp phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo có từ 2 chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên cua về bên phải.", "class_id": 61 },
-  { "id": "W.203a", "ma_bien": "W.203a", "ten_bien": "Đường bị thu hẹp cả hai bên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột từ cả hai bên trái và phải.", "class_id": 62 },
-  { "id": "W.203b", "ma_bien": "W.203b", "ten_bien": "Đường bị thu hẹp bên trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột ở phía bên trái.", "class_id": 63 },
-  { "id": "W.203c", "ma_bien": "W.203c", "ten_bien": "Đường bị thu hẹp bên phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột ở phía bên phải.", "class_id": 64 },
-  { "id": "W.204", "ma_bien": "W.204", "ten_bien": "Đường hai chiều", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường phía trước có cả hai chiều xe chạy chung trên một phần đường.", "class_id": 65 },
-  { "id": "W.205a", "ma_bien": "W.205a", "ten_bien": "Đường giao nhau cùng cấp ngã tư", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến ngã tư giao nhau cùng cấp. Lái xe nhường đường bên phải.", "class_id": 66 },
-  { "id": "W.205b", "ma_bien": "W.205b", "ten_bien": "Đường giao nhau cùng cấp ngã ba trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến ngã ba giao nhau cùng cấp nhánh nằm bên trái.", "class_id": 67 },
-  { "id": "W.205c", "ma_bien": "W.205c", "ten_bien": "Đường giao nhau cùng cấp ngã ba phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến ngã ba giao nhau cùng cấp nhánh nằm bên phải.", "class_id": 68 },
-  { "id": "W.205d", "ma_bien": "W.205d", "ten_bien": "Đường giao nhau cùng cấp hình chữ T", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến nơi giao nhau đường dạng chữ T.", "class_id": 69 },
-  { "id": "W.205e", "ma_bien": "W.205e", "ten_bien": "Đường giao nhau cùng cấp vòng xuyến", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến nơi giao cắt có vòng xuyến đảo an toàn ở giữa.", "class_id": 70 },
-  { "id": "W.206", "ma_bien": "W.206", "ten_bien": "Giao nhau chạy theo vòng xuyến", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến nơi giao nhau đường bộ tổ chức di chuyển quanh vòng xuyến.", "class_id": 71 },
-  { "id": "W.207a", "ma_bien": "W.207a", "ten_bien": "Giao nhau với đường không ưu tiên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Bạn đang đi trên trục đường ưu tiên, sắp giao với đường nhánh (đường phụ).", "class_id": 72 },
-  { "id": "W.207b", "ma_bien": "W.207b", "ten_bien": "Giao không ưu tiên nhánh trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Sắp giao nhau với đường không ưu tiên nằm ở phía bên trái.", "class_id": 73 },
-  { "id": "W.207c", "ma_bien": "W.207c", "ten_bien": "Giao không ưu tiên nhánh phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Sắp giao nhau với đường không ưu tiên nằm ở phía bên phải.", "class_id": 74 },
-  { "id": "W.208", "ma_bien": "W.208", "ten_bien": "Giao nhau với đường ưu tiên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Bạn đang đi từ đường nhỏ, phải giảm tốc độ nhường đường cho xe ở đường lớn.", "class_id": 75 },
-  { "id": "W.209", "ma_bien": "W.209", "ten_bien": "Giao nhau có tín hiệu đèn", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo nút giao tiếp theo có đèn điều khiển giao thông (xanh, đỏ, vàng).", "class_id": 76 },
-  { "id": "W.210", "ma_bien": "W.210", "ten_bien": "Giao nhau với đường sắt có rào chắn", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến vị trí giao nhau với đường sắt có rào và gác chắn.", "class_id": 77 },
-  { "id": "W.211a", "ma_bien": "W.211a", "ten_bien": "Giao nhau với đường sắt không rào chắn", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Sắp đến vị trí giao cắt đường sắt không có rào bảo vệ, lái xe tự quan sát.", "class_id": 78 },
-  { "id": "W.211b", "ma_bien": "W.211b", "ten_bien": "Giao nhau với đường tàu điện", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo vị trí giao nhau của đường bộ với đường chạy tàu điện.", "class_id": 79 },
-  { "id": "W.212", "ma_bien": "W.212", "ten_bien": "Cầu hẹp", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp qua cầu hẹp có lòng cầu nhỏ hơn hoặc bằng 4m.", "class_id": 80 },
-  { "id": "W.213", "ma_bien": "W.213", "ten_bien": "Cầu tạm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đi qua cầu tạm được làm phục vụ giao thông tạm thời.", "class_id": 81 },
-  { "id": "W.214", "ma_bien": "W.214", "ten_bien": "Cầu xoay cầu cất", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cầu có thể xoay hoặc nâng lên để tàu thuyền qua lại bên dưới.", "class_id": 82 },
-  { "id": "W.215a", "ma_bien": "W.215a", "ten_bien": "Kè vực sâu phía trước", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường sắp tới chạy sát bờ sông, bờ hồ hoặc vực sâu phía trước mặt.", "class_id": 83 },
-  { "id": "W.215b", "ma_bien": "W.215b", "ten_bien": "Kè vực sâu bên phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường chạy sát bờ sông, vực sâu ở phía bên tay phải.", "class_id": 84 },
-  { "id": "W.215c", "ma_bien": "W.215c", "ten_bien": "Kè vực sâu bên trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường chạy sát bờ sông, vực sâu ở phía bên tay trái.", "class_id": 85 },
-  { "id": "W.216a", "ma_bien": "W.216a", "ten_bien": "Đường ngầm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường có nước chảy tràn qua bề mặt thường xuyên hoặc theo mùa.", "class_id": 86 },
-  { "id": "W.216b", "ma_bien": "W.216b", "ten_bien": "Đường ngầm nguy cơ lũ quét", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường ngầm thường xuyên có lũ quét tràn qua cực kỳ nguy hiểm.", "class_id": 87 },
-  { "id": "W.217", "ma_bien": "W.217", "ten_bien": "Bến phà", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đến bến phà trung chuyển phương tiện qua sông.", "class_id": 88 },
-  { "id": "W.218", "ma_bien": "W.218", "ten_bien": "Cửa chui", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đi qua gầm cầu vượt, cổng hầm hẹp giới hạn chiều cao.", "class_id": 89 },
-  { "id": "W.219", "ma_bien": "W.219", "ten_bien": "Dốc xuống nguy hiểm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường dốc xuống dài và dốc lớn. Cần đi số thấp để hãm phanh động cơ.", "class_id": 90 },
-  { "id": "W.220", "ma_bien": "W.220", "ten_bien": "Dốc lên nguy hiểm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường dốc đi lên cao dốc nguy hiểm, cần chủ động đi số thấp để lấy đà.", "class_id": 91 },
-  { "id": "W.221a", "ma_bien": "W.221a", "ten_bien": "Đường có gồ giảm tốc", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đường có gờ giảm tốc cao để cưỡng bức giảm tốc độ.", "class_id": 92 },
-  { "id": "W.221b", "ma_bien": "W.221b", "ten_bien": "Đường có sóng trâu", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường bị hư hỏng lồi lõm, tạo thành các rãnh lún sâu dạng sóng trâu.", "class_id": 93 },
-  { "id": "W.222a", "ma_bien": "W.222a", "ten_bien": "Đường trơn trượt", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đường dễ trơn trượt khi trời mưa, bùn đất. Cần giảm tốc độ tối đa.", "class_id": 94 },
-  { "id": "W.222b", "ma_bien": "W.222b", "ten_bien": "Lề đường nguy hiểm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo lề đường không ổn định, dễ sạt lở hoặc hụt sâu, tránh đỗ sát lề.", "class_id": 95 },
-  { "id": "W.223a", "ma_bien": "W.223a", "ten_bien": "Vách đá nguy hiểm bên trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo vách đá sát lề đường bên trái có nguy cơ sạt lở đá xuống.", "class_id": 96 },
-  { "id": "W.223b", "ma_bien": "W.223b", "ten_bien": "Vách đá nguy hiểm bên phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo vách đá sát lề đường bên phải có nguy cơ sạt lở đá xuống.", "class_id": 97 },
-  { "id": "W.224", "ma_bien": "W.224", "ten_bien": "Đường người đi bộ cắt ngang", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo vị trí có vạch kẻ cho người đi bộ qua đường. Lái xe phải nhường đường.", "class_id": 98 },
-  { "id": "W.225", "ma_bien": "W.225", "ten_bien": "Trẻ em", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo gần trường học, khu vui chơi có trẻ em tự đi lại trên đường.", "class_id": 99 },
-  { "id": "W.226", "ma_bien": "W.226", "ten_bien": "Đường người đi xe đạp cắt ngang", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo khu vực người đi xe đạp thường xuyên cắt ngang qua đường.", "class_id": 100 },
-  { "id": "W.227", "ma_bien": "W.227", "ten_bien": "Công trường", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường phía trước đang sửa chữa, thi công, có công nhân và máy móc hoạt động.", "class_id": 101 },
-  { "id": "W.228a", "ma_bien": "W.228a", "ten_bien": "Đá lở", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo khu vực miền núi hay có đá lở bất ngờ rơi xuống lòng đường.", "class_id": 102 },
-  { "id": "W.228b", "ma_bien": "W.228b", "ten_bien": "Sỏi đá bắn lên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đường trải sỏi dễ bắn lên gây vỡ kính hoặc nguy hiểm cho xe khác.", "class_id": 103 },
-  { "id": "W.229", "ma_bien": "W.229", "ten_bien": "Dải máy bay lên xuống", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Đoạn đường sát sân bay, máy bay cất hạ cánh tầm thấp gây tiếng động mạnh bất ngờ.", "class_id": 104 },
-  { "id": "W.230", "ma_bien": "W.230", "ten_bien": "Gia súc", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo khu chăn thả thường xuyên có trâu bò thả rông qua đường.", "class_id": 105 },
-  { "id": "W.231", "ma_bien": "W.231", "ten_bien": "Thú rừng vượt qua đường", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Khu bảo tồn thiên nhiên, rừng quốc gia có động vật hoang dã băng qua đường.", "class_id": 106 },
-  { "id": "W.232", "ma_bien": "W.232", "ten_bien": "Gió ngang", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo khu vực cầu cao, đèo dốc thường xuyên có gió thổi ngang cực mạnh gây mất lái.", "class_id": 107 },
-  { "id": "W.233", "ma_bien": "W.233", "ten_bien": "Nguy hiểm khác", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo các nguy hiểm bất ngờ khác chưa được phân loại cụ thể.", "class_id": 108 },
-  { "id": "W.234", "ma_bien": "W.234", "ten_bien": "Giao nhau với đường hai chiều", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Bạn đang đi trên đường một chiều, chuẩn bị giao cắt với đường đi hai chiều.", "class_id": 109 },
-  { "id": "W.235", "ma_bien": "W.235", "ten_bien": "Đường đôi", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo sắp đi vào đoạn đường chia đôi thành hai chiều bằng dải phân cách cứng.", "class_id": 110 },
-  { "id": "W.236", "ma_bien": "W.236", "ten_bien": "Hết đường đôi", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu kết thúc đoạn đường có dải phân cách chia hai chiều, đi vào đường hai chiều thông thường.", "class_id": 111 },
-  { "id": "W.239", "ma_bien": "W.239", "ten_bien": "Đường cáp điện phía trên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo phía trên đầu có đường dây cao thế chạy cắt ngang lòng đường.", "class_id": 112 },
-  { "id": "W.240", "ma_bien": "W.240", "ten_bien": "Đường hầm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu sắp đi vào đường hầm xuyên lòng đất hoặc núi.", "class_id": 113 },
-  { "id": "W.241", "ma_bien": "W.241", "ten_bien": "Ùn tắc giao thông", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường phía trước thường xuyên xảy ra kẹt xe ùn ứ nghiêm trọng.", "class_id": 114 },
-  { "id": "W.242a", "ma_bien": "W.242a", "ten_bien": "Nơi đường sắt giao vuông góc 1 đường", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu điểm giao cắt vuông góc trực tiếp của đường bộ với 1 tuyến đường sắt.", "class_id": 115 },
-  { "id": "W.242b", "ma_bien": "W.242b", "ten_bien": "Nơi đường sắt giao vuông góc nhiều đường", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu điểm giao cắt vuông góc trực tiếp của đường bộ với từ 2 ray đường sắt trở lên.", "class_id": 116 },
-  { "id": "W.243a", "ma_bien": "W.243a", "ten_bien": "Đường sắt giao không vuông góc 50m", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 50m (biển có 1 vạch đỏ).", "class_id": 117 },
-  { "id": "W.243b", "ma_bien": "W.243b", "ten_bien": "Đường sắt giao không vuông góc 100m", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 100m (biển có 2 vạch đỏ).", "class_id": 118 },
-  { "id": "W.243c", "ma_bien": "W.243c", "ten_bien": "Đường sắt giao không vuông góc 150m", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 150m (biển có 3 vạch đỏ).", "class_id": 119 },
-  { "id": "W.244", "ma_bien": "W.244", "ten_bien": "Đoạn đường hay xảy ra tai nạn", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo đoạn đường phía trước 'đen' về tai nạn, yêu cầu cực kỳ cẩn trọng.", "class_id": 120 },
-  { "id": "W.245a", "ma_bien": "W.245a", "ten_bien": "Đi chậm", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Yêu cầu lái xe bắt buộc phải giảm tốc độ tối đa, chú ý quan sát.", "class_id": 121 },
-  { "id": "W.245b", "ma_bien": "W.245b", "ten_bien": "Đi chậm có chỉ dẫn tiếng Anh", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Biển cảnh báo đi chậm kết hợp chữ 'SLOW' hướng dẫn người nước ngoài.", "class_id": 122 },
-  { "id": "W.246a", "ma_bien": "W.246a", "ten_bien": "Chú ý chướng ngại vật tránh bên trái", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu chướng ngại vật trên đường, phương tiện phải rẽ tránh sang phía bên trái.", "class_id": 123 },
-  { "id": "W.246b", "ma_bien": "W.246b", "ten_bien": "Chú ý chướng ngại vật tránh bên phải", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Báo hiệu chướng ngại vật trên đường, phương tiện phải rẽ tránh sang phía bên phải.", "class_id": 124 },
-  { "id": "W.246c", "ma_bien": "W.246c", "ten_bien": "Chú ý chướng ngại vật tránh hai bên", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Chướng ngại vật nằm chính giữa, phương tiện đi tránh sang bên trái hoặc bên phải đều được.", "class_id": 125 },
-  { "id": "W.247", "ma_bien": "W.247", "ten_bien": "Chú ý xe đỗ trên đường", "loai_bien": "Biển báo nguy hiểm", "cong_dung": "Cảnh báo phía trước thường có xe tải, container đỗ cố định bên lề khuất tầm nhìn.", "class_id": 126 },
-  { "id": "R.301a", "ma_bien": "R.301a", "ten_bien": "Hướng đi thẳng phải theo", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Bắt buộc phương tiện chỉ được phép đi thẳng, cấm rẽ trái rẽ phải.", "class_id": 127 },
-  { "id": "R.301b", "ma_bien": "R.301b", "ten_bien": "Hướng rẽ phải phải theo", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Bắt buộc phương tiện chỉ được rẽ phải tại ngã rẽ.", "class_id": 128 },
-  { "id": "R.301c", "ma_bien": "R.301c", "ten_bien": "Hướng rẽ trái phải theo", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Bắt buộc phương tiện chỉ được rẽ trái tại ngã rẽ.", "class_id": 129 },
-  { "id": "R.301d", "ma_bien": "R.301d", "ten_bien": "Hướng rẽ phải trước biển", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Yêu cầu rẽ phải ngay tại lối rẽ trước vị trí đặt biển báo.", "class_id": 130 },
-  { "id": "R.301e", "ma_bien": "R.301e", "ten_bien": "Hướng rẽ trái trước biển", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Yêu cầu rẽ trái ngay tại lối rẽ trước vị trí đặt biển báo.", "class_id": 131 },
-  { "id": "R.301f", "ma_bien": "R.301f", "ten_bien": "Hướng đi thẳng và rẽ phải", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Chỉ được phép di chuyển đi thẳng hoặc bẻ lái sang bên phải.", "class_id": 132 },
-  { "id": "R.301g", "ma_bien": "R.301g", "ten_bien": "Hướng đi thẳng và rẽ trái", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Chỉ được phép di chuyển đi thẳng hoặc bẻ lái sang bên trái.", "class_id": 133 },
-  { "id": "R.301h", "ma_bien": "R.301h", "ten_bien": "Hướng rẽ trái và rẽ phải", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Chỉ được phép rẽ trái hoặc rẽ phải tại nút giao, cấm đi thẳng.", "class_id": 134 },
-  { "id": "R.302a", "ma_bien": "R.302a", "ten_bien": "Vòng chướng ngại vật sang phải", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hiệu lệnh bắt buộc lái xe đi tránh chướng ngại vật theo hướng bên phải.", "class_id": 135 },
-  { "id": "R.302b", "ma_bien": "R.302b", "ten_bien": "Vòng chướng ngại vật sang trái", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hiệu lệnh bắt buộc lái xe đi tránh chướng ngại vật theo hướng bên trái.", "class_id": 136 },
-  { "id": "R.302c", "ma_bien": "R.302c", "ten_bien": "Vòng chướng ngại vật cả hai bên", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hiệu lệnh tránh chướng ngại vật từ cả hai hướng trái hoặc phải đều được.", "class_id": 137 },
-  { "id": "R.303", "ma_bien": "R.303", "ten_bien": "Nơi giao nhau chạy theo vòng xuyến", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Bắt buộc tất cả phương tiện vào nút giao phải chuyển hướng di chuyển quanh vòng xuyến.", "class_id": 138 },
-  { "id": "R.304", "ma_bien": "R.304", "ten_bien": "Đường dành cho xe thô sơ", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Đường thiết kế riêng cho xe thô sơ và người đi bộ, xe cơ giới cấm đi vào.", "class_id": 139 },
-  { "id": "R.305", "ma_bien": "R.305", "ten_bien": "Đường dành cho người đi bộ", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Đường dành riêng cho người bộ hành, nghiêm cấm tất cả phương tiện cơ giới/thô sơ đi vào.", "class_id": 140 },
-  { "id": "R.306", "ma_bien": "R.306", "ten_bien": "Tốc độ tối thiểu cho phép", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Bắt buộc phương tiện phải chạy bằng hoặc nhanh hơn trị số ghi trên biển.", "class_id": 141 },
-  { "id": "R.307", "ma_bien": "R.307", "ten_bien": "Hết hạn chế tốc độ tối thiểu", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Báo hiệu hết hiệu lực bắt buộc tốc độ chạy tối thiểu.", "class_id": 142 },
-  { "id": "R.308a", "ma_bien": "R.308a", "ten_bien": "Tuyến đường cầu vượt cắt ngang bên phải", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Biểu thị tuyến đường cầu vượt cắt qua phía bên phải trục di chuyển.", "class_id": 143 },
-  { "id": "R.308b", "ma_bien": "R.308b", "ten_bien": "Tuyến đường cầu vượt cắt ngang bên trái", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Biểu thị tuyến đường cầu vượt cắt qua phía bên trái trục di chuyển.", "class_id": 144 },
-  { "id": "R.309", "ma_bien": "R.309", "ten_bien": "Ấn còi", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Báo hiệu bắt buộc lái xe phải bóp còi để cảnh báo (thường ở cua đèo hiểm hóc).", "class_id": 145 },
-  { "id": "R.310", "ma_bien": "R.310", "ten_bien": "Hết hạn chế tốc độ tối thiểu", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hết tác dụng của lệnh chạy tốc độ tối thiểu trên đường cao tốc.", "class_id": 146 },
-  { "id": "R.403a", "ma_bien": "R.403a", "ten_bien": "Đường dành cho xe ô tô", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Đường được thiết kế chuyên dụng dành riêng cho ô tô di chuyển.", "class_id": 147 },
-  { "id": "R.403b", "ma_bien": "R.403b", "ten_bien": "Đường dành cho ô tô xe máy", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Đường dành riêng cho cả xe ô tô và xe máy đi chung.", "class_id": 148 },
-  { "id": "R.404a", "ma_bien": "R.404a", "ten_bien": "Hết đường dành cho xe ô tô", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hết đoạn đường dành riêng cho xe ô tô hoạt động.", "class_id": 149 },
-  { "id": "R.404b", "ma_bien": "R.404b", "ten_bien": "Hết đường dành cho ô tô xe máy", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Hết đoạn đường dành riêng cho ô tô xe máy đi chung.", "class_id": 150 },
-  { "id": "R.411", "ma_bien": "R.411", "ten_bien": "Hướng đi trên mỗi làn đường", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Chỉ dẫn hướng di chuyển bắt buộc tuân theo trên từng làn đường cụ thể.", "class_id": 151 },
-  { "id": "R.412a", "ma_bien": "R.412a", "ten_bien": "Làn đường dành cho ô tô khách", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô khách hoạt động.", "class_id": 152 },
-  { "id": "R.412b", "ma_bien": "R.412b", "ten_bien": "Làn đường dành cho ô tô con", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô con hoạt động.", "class_id": 153 },
-  { "id": "R.412c", "ma_bien": "R.412c", "ten_bien": "Làn đường dành cho ô tô tải", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô tải hoạt động.", "class_id": 154 },
-  { "id": "R.412d", "ma_bien": "R.412d", "ten_bien": "Làn đường dành cho xe máy", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Làn đường quy định chỉ dành riêng cho xe máy hoạt động.", "class_id": 155 },
-  { "id": "R.415", "ma_bien": "R.415", "ten_bien": "Biển gộp làn đường theo phương tiện", "loai_bien": "Biển hiệu lệnh", "cong_dung": "Biển hiệu lệnh gộp làn, quy định loại phương tiện được phép đi trên từng làn.", "class_id": 156 },
-  { "id": "I.401", "ma_bien": "I.401", "ten_bien": "Bắt đầu đường ưu tiên", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn bắt đầu trục đường ưu tiên, phương tiện được quyền qua ngã giao cắt trước.", "class_id": 157 },
-  { "id": "I.402", "ma_bien": "I.402", "ten_bien": "Hết đoạn đường ưu tiên", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Báo kết thúc đoạn đường ưu tiên. Từ đây tuân thủ luật nhường đường chuẩn.", "class_id": 158 },
-  { "id": "I.405a", "ma_bien": "I.405a", "ten_bien": "Đường cụt bên phải", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn ngõ rẽ sang phía bên phải là đường cụt không thông.", "class_id": 159 },
-  { "id": "I.405b", "ma_bien": "I.405b", "ten_bien": "Đường cụt bên trái", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn ngõ rẽ sang phía bên trái là đường cụt không thông.", "class_id": 160 },
-  { "id": "I.407a", "ma_bien": "I.407a", "ten_bien": "Đường một chiều", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn đoạn đường chạy một chiều, cấm lùi xe quay đầu ngược dòng.", "class_id": 161 },
-  { "id": "I.407b", "ma_bien": "I.407b", "ten_bien": "Đường một chiều rẽ phải", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn lối rẽ phải đi vào một con đường chạy một chiều.", "class_id": 162 },
-  { "id": "I.408", "ma_bien": "I.408", "ten_bien": "Nơi đỗ xe", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn khu vực bãi đỗ xe công cộng được phép đỗ xe lâu dài.", "class_id": 163 },
-  { "id": "I.408a", "ma_bien": "I.408a", "ten_bien": "Nơi đỗ xe một phần trên vỉa hè", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn đỗ xe sao cho bánh bên phải gác một phần lên vỉa hè đường.", "class_id": 164 },
-  { "id": "I.414a", "ma_bien": "I.414a", "ten_bien": "Chỉ hướng đường", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ hướng di chuyển và khoảng cách (km) đến các địa danh phía trước.", "class_id": 165 },
-  { "id": "I.417", "ma_bien": "I.417", "ten_bien": "Chỉ hướng cầu vượt", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ hướng đi tránh chướng ngại vật bằng cách đi lên cầu vượt.", "class_id": 166 },
-  { "id": "I.423a", "ma_bien": "I.423a", "ten_bien": "Đường người đi bộ sang ngang", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ vị trí sơn kẻ đường dành riêng cho người bộ hành đi qua lộ trình.", "class_id": 167 },
-  { "id": "I.423b", "ma_bien": "I.423b", "ten_bien": "Đường người đi bộ sang ngang bên trái", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ vị trí lối sang đường nằm lệch về hướng bên trái của đường.", "class_id": 168 },
-  { "id": "I.424a", "ma_bien": "I.424a", "ten_bien": "Cầu vượt qua đường cho người đi bộ", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn vị trí cầu đi bộ trên cao giúp người bộ hành sang đường an toàn.", "class_id": 169 },
-  { "id": "I.424b", "ma_bien": "I.424b", "ten_bien": "Hầm chui qua đường cho người đi bộ", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn vị trí hầm chui dưới lòng đất giúp người bộ hành sang đường.", "class_id": 170 },
-  { "id": "I.439", "ma_bien": "I.439", "ten_bien": "Tên đường", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Báo hiệu tên của con đường, phố hoặc đại lộ phương tiện đang đi qua.", "class_id": 171 },
-  { "id": "I.440", "ma_bien": "I.440", "ten_bien": "Di tích lịch sử", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn lối đi đến các di tích lịch sử, danh lam thắng cảnh khu vực lân cận.", "class_id": 172 },
-  { "id": "I.441a", "ma_bien": "I.441a", "ten_bien": "Báo hiệu phía trước có công trường", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn từ xa sắp đi qua khu vực đang thi công công trình đường bộ.", "class_id": 173 },
-  { "id": "I.443", "ma_bien": "I.443", "ten_bien": "Xe kéo moóc", "loai_bien": "Biển chỉ dẫn", "cong_dung": "Chỉ dẫn làn đường cho phép xe tải kéo theo rơ-moóc hoạt động.", "class_id": 174 },
-  { "id": "S.501", "ma_bien": "S.501", "ten_bien": "Phạm vi tác dụng của biển", "loai_bien": "Biển phụ", "cong_dung": "Thông báo chiều dài đoạn đường áp dụng hiệu lực biển chính (có hai mũi tên dọc).", "class_id": 175 },
-  { "id": "S.502", "ma_bien": "S.502", "ten_bien": "Khoảng cách đến đối tượng báo hiệu", "loai_bien": "Biển phụ", "cong_dung": "Thông báo cự ly từ biển đến vị trí nguy hiểm thực tế (không có mũi tên).", "class_id": 176 },
-  { "id": "S.503a", "ma_bien": "S.503a", "ten_bien": "Hướng tác dụng trái", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ hiệu lực biển chính tác dụng hướng lệch về góc bên trái.", "class_id": 177 },
-  { "id": "S.503b", "ma_bien": "S.503b", "ten_bien": "Hướng tác dụng phải", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ hiệu lực biển chính tác dụng hướng lệch về góc bên phải.", "class_id": 178 },
-  { "id": "S.503c", "ma_bien": "S.503c", "ten_bien": "Hướng tác dụng cả hai bên", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ biển chính áp dụng hiệu lực cho cả hai hướng trái và phải.", "class_id": 179 },
-  { "id": "S.504", "ma_bien": "S.504", "ten_bien": "Làn đường", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ biển báo chính đi kèm chỉ áp dụng duy nhất cho làn đường cụ thể treo biển.", "class_id": 180 },
-  { "id": "S.505a", "ma_bien": "S.505a", "ten_bien": "Loại xe", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ biển báo chính chỉ áp đặt cho dòng xe vẽ trên hình (ví dụ: hình xe tải).", "class_id": 181 },
-  { "id": "S.506a", "ma_bien": "S.506a", "ten_bien": "Hướng đường ưu tiên", "loai_bien": "Biển phụ", "cong_dung": "Chỉ rõ sơ đồ hướng di chuyển chính được ưu tiên tại ngã tư giao nhau.", "class_id": 182 },
-  { "id": "S.507", "ma_bien": "S.507", "ten_bien": "Hướng rẽ nguy hiểm", "loai_bien": "Biển phụ", "cong_dung": "Sơn mũi tên chỉ hướng rẽ cong nguy hiểm tại các đèo dốc khuất tầm nhìn.", "class_id": 183 },
-  { "id": "S.508a", "ma_bien": "S.508a", "ten_bien": "Biểu thị thời gian", "loai_bien": "Biển phụ", "cong_dung": "Quy định khung giờ áp dụng hiệu lực của biển báo chính.", "class_id": 184 },
-  { "id": "S.509a", "ma_bien": "S.509a", "ten_bien": "Thuyết minh biển chính", "loai_bien": "Biển phụ", "cong_dung": "Bảng phụ ghi chú thêm thông tin chữ thuyết minh cho biển báo phía trên.", "class_id": 185 }
+  {
+    "id": "P.101",
+    "ma_bien": "P.101",
+    "ten_bien": "Đường cấm",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả các phương tiện đi lại cả hai hướng, trừ xe ưu tiên.",
+    "class_id": 0
+  },
+  {
+    "id": "P.102",
+    "ma_bien": "P.102",
+    "ten_bien": "Cấm đi ngược chiều",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe đi vào theo chiều đặt biển, trừ xe ưu tiên.",
+    "class_id": 1
+  },
+  {
+    "id": "P.103a",
+    "ma_bien": "P.103a",
+    "ten_bien": "Cấm xe ô tô",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả các loại xe cơ giới kể cả môtô 3 bánh đi qua, trừ xe máy 2 bánh và xe ưu tiên.",
+    "class_id": 2
+  },
+  {
+    "id": "P.103b",
+    "ma_bien": "P.103b",
+    "ten_bien": "Cấm xe ô tô rẽ trái",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe cơ giới rẽ trái (kể cả ô tô khách, xe tải), đồng thời cấm quay đầu xe.",
+    "class_id": 3
+  },
+  {
+    "id": "P.103c",
+    "ma_bien": "P.103c",
+    "ten_bien": "Cấm xe ô tô rẽ phải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe cơ giới rẽ phải tại ngã ba, ngã tư.",
+    "class_id": 4
+  },
+  {
+    "id": "P.104",
+    "ma_bien": "P.104",
+    "ten_bien": "Cấm xe máy",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe môtô 2 bánh đi qua. Không áp dụng cho xe gắn máy dưới 50cc.",
+    "class_id": 5
+  },
+  {
+    "id": "P.105",
+    "ma_bien": "P.105",
+    "ten_bien": "Cấm xe ô tô và xe máy",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm cả xe ô tô và xe máy 2 bánh đi qua đoạn đường đặt biển.",
+    "class_id": 6
+  },
+  {
+    "id": "P.106a",
+    "ma_bien": "P.106a",
+    "ten_bien": "Cấm xe ô tô tải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe tải có khối lượng chuyên chở lớn hơn 1,5 tấn. Cấm luôn cả máy kéo.",
+    "class_id": 7
+  },
+  {
+    "id": "P.106b",
+    "ma_bien": "P.106b",
+    "ten_bien": "Cấm xe tải trên trị số ghi",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe tải có khối lượng chuyên chở lớn hơn trị số ghi trên biển.",
+    "class_id": 8
+  },
+  {
+    "id": "P.106c",
+    "ma_bien": "P.106c",
+    "ten_bien": "Cấm xe chở hàng nguy hiểm",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe vận chuyển chất độc hại, chất nổ, hàng nguy hiểm đi qua.",
+    "class_id": 9
+  },
+  {
+    "id": "P.107",
+    "ma_bien": "P.107",
+    "ten_bien": "Cấm xe ô tô khách và xe ô tô tải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe ô tô chở khách và các loại xe ô tô tải đi qua đoạn đường này.",
+    "class_id": 10
+  },
+  {
+    "id": "P.107a",
+    "ma_bien": "P.107a",
+    "ten_bien": "Cấm xe ô tô khách",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe ô tô chở khách đi qua, không áp dụng cho xe buýt công cộng.",
+    "class_id": 11
+  },
+  {
+    "id": "P.107b",
+    "ma_bien": "P.107b",
+    "ten_bien": "Cấm xe ô tô taxi",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe ô tô taxi hoạt động trên đoạn đường này.",
+    "class_id": 12
+  },
+  {
+    "id": "P.108",
+    "ma_bien": "P.108",
+    "ten_bien": "Cấm xe kéo rơ-moóc",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe cơ giới kéo theo rơ-moóc hoặc máy kéo đi qua.",
+    "class_id": 13
+  },
+  {
+    "id": "P.108a",
+    "ma_bien": "P.108a",
+    "ten_bien": "Cấm sơ-mi rơ-moóc",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe đầu kéo kéo theo sơ-mi rơ-moóc đi qua.",
+    "class_id": 14
+  },
+  {
+    "id": "P.109",
+    "ma_bien": "P.109",
+    "ten_bien": "Cấm máy kéo",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả các loại máy kéo, kể cả máy kéo bánh hơi và bánh xích.",
+    "class_id": 15
+  },
+  {
+    "id": "P.110a",
+    "ma_bien": "P.110a",
+    "ten_bien": "Cấm đi xe đạp",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe đạp đi qua. Không cấm người dắt xe đạp.",
+    "class_id": 16
+  },
+  {
+    "id": "P.110b",
+    "ma_bien": "P.110b",
+    "ten_bien": "Cấm xe đạp thồ",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe đạp thồ (chở hàng hóa cồng kềnh) đi qua.",
+    "class_id": 17
+  },
+  {
+    "id": "P.111a",
+    "ma_bien": "P.111a",
+    "ten_bien": "Cấm xe gắn máy",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe gắn máy dưới 50cc đi qua. Biển này không cấm xe môtô phân khối lớn.",
+    "class_id": 18
+  },
+  {
+    "id": "P.111b",
+    "ma_bien": "P.111b",
+    "ten_bien": "Cấm xe ba bánh có động cơ",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe xích lô máy, xe lôi máy, xe ba gác máy đi qua.",
+    "class_id": 19
+  },
+  {
+    "id": "P.111c",
+    "ma_bien": "P.111c",
+    "ten_bien": "Cấm xe ba bánh không động cơ",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe xích lô thường, xe ba gác đạp đi qua.",
+    "class_id": 20
+  },
+  {
+    "id": "P.111d",
+    "ma_bien": "P.111d",
+    "ten_bien": "Cấm xe lôi máy",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe máy kéo theo xe lôi chở khách hoặc hàng.",
+    "class_id": 21
+  },
+  {
+    "id": "P.112",
+    "ma_bien": "P.112",
+    "ten_bien": "Cấm người đi bộ",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm người đi bộ đi vào đoạn đường này để đảm bảo an toàn.",
+    "class_id": 22
+  },
+  {
+    "id": "P.113",
+    "ma_bien": "P.113",
+    "ten_bien": "Cấm xe người kéo đẩy",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe thô sơ do người kéo hoặc đẩy đi qua.",
+    "class_id": 23
+  },
+  {
+    "id": "P.114",
+    "ma_bien": "P.114",
+    "ten_bien": "Cấm xe súc vật kéo",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe do súc vật kéo (ngựa, trâu, bò) di chuyển.",
+    "class_id": 24
+  },
+  {
+    "id": "P.115",
+    "ma_bien": "P.115",
+    "ten_bien": "Hạn chế tải trọng toàn bộ xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe có tải trọng toàn bộ (cả xe và hàng) vượt quá số trị ghi trên biển.",
+    "class_id": 25
+  },
+  {
+    "id": "P.116",
+    "ma_bien": "P.116",
+    "ten_bien": "Hạn chế tải trọng trục xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe có tải trọng phân bổ trên một trục xe vượt quá trị số ghi trên biển.",
+    "class_id": 26
+  },
+  {
+    "id": "P.117",
+    "ma_bien": "P.117",
+    "ten_bien": "Hạn chế chiều cao",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe có chiều cao toàn bộ vượt quá trị số ghi trên biển (thường gặp ở cầu vượt, hầm).",
+    "class_id": 27
+  },
+  {
+    "id": "P.118",
+    "ma_bien": "P.118",
+    "ten_bien": "Hạn chế chiều rộng",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe có chiều rộng toàn bộ (kể cả hàng hóa) vượt quá trị số ghi trên biển.",
+    "class_id": 28
+  },
+  {
+    "id": "P.119",
+    "ma_bien": "P.119",
+    "ten_bien": "Hạn chế chiều dài xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe hoặc đoàn xe có chiều dài toàn bộ vượt quá trị số ghi trên biển.",
+    "class_id": 29
+  },
+  {
+    "id": "P.120",
+    "ma_bien": "P.120",
+    "ten_bien": "Hạn chế chiều dài xe kéo moóc",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe kéo rơ-moóc hoặc sơ-mi rơ-moóc có tổng chiều dài vượt quá trị số.",
+    "class_id": 30
+  },
+  {
+    "id": "P.121",
+    "ma_bien": "P.121",
+    "ten_bien": "Cự ly tối thiểu giữa hai xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Bắt buộc các xe phải giữ khoảng cách an toàn tối thiểu lớn hơn trị số ghi trên biển.",
+    "class_id": 31
+  },
+  {
+    "id": "P.123a",
+    "ma_bien": "P.123a",
+    "ten_bien": "Cấm rẽ trái",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm rẽ trái tại nút giao. Theo luật mới, biển này không cấm quay đầu xe.",
+    "class_id": 32
+  },
+  {
+    "id": "P.123b",
+    "ma_bien": "P.123b",
+    "ten_bien": "Cấm rẽ phải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm rẽ phải tại nút giao. Biển này không cấm quay đầu xe.",
+    "class_id": 33
+  },
+  {
+    "id": "P.124a",
+    "ma_bien": "P.124a",
+    "ten_bien": "Cấm quay đầu xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe quay đầu theo hình chữ U. Biển này không cấm rẽ trái.",
+    "class_id": 34
+  },
+  {
+    "id": "P.124b",
+    "ma_bien": "P.124b",
+    "ten_bien": "Cấm ô tô quay đầu xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe ô tô quay đầu xe dưới mọi hình thức.",
+    "class_id": 35
+  },
+  {
+    "id": "P.124c",
+    "ma_bien": "P.124c",
+    "ten_bien": "Cấm rẽ trái và quay đầu xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả phương tiện rẽ trái và đồng thời cấm quay đầu xe.",
+    "class_id": 36
+  },
+  {
+    "id": "P.124d",
+    "ma_bien": "P.124d",
+    "ten_bien": "Cấm rẽ phải và quay đầu xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả phương tiện rẽ phải và đồng thời cấm quay đầu xe.",
+    "class_id": 37
+  },
+  {
+    "id": "P.124e",
+    "ma_bien": "P.124e",
+    "ten_bien": "Cấm ô tô rẽ trái và quay đầu",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe ô tô rẽ trái và đồng thời cấm ô tô quay đầu xe.",
+    "class_id": 38
+  },
+  {
+    "id": "P.124f",
+    "ma_bien": "P.124f",
+    "ten_bien": "Cấm ô tô rẽ phải và quay đầu",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm xe ô tô rẽ phải và đồng thời cấm ô tô quay đầu xe.",
+    "class_id": 39
+  },
+  {
+    "id": "P.125",
+    "ma_bien": "P.125",
+    "ten_bien": "Cấm vượt",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe cơ giới vượt nhau. Được phép vượt xe máy 2 bánh, xe gắn máy.",
+    "class_id": 40
+  },
+  {
+    "id": "P.126",
+    "ma_bien": "P.126",
+    "ten_bien": "Cấm xe tải vượt",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe tải có khối lượng lớn hơn 1.5 tấn vượt xe cơ giới khác.",
+    "class_id": 41
+  },
+  {
+    "id": "P.127",
+    "ma_bien": "P.127",
+    "ten_bien": "Tốc độ tối đa cho phép",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các loại xe chạy quá tốc độ tối đa ghi trên biển (km/h).",
+    "class_id": 42
+  },
+  {
+    "id": "P.127a",
+    "ma_bien": "P.127a",
+    "ten_bien": "Tốc độ tối đa cho phép ban đêm",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Áp dụng tốc độ tối đa cho phép chạy vào ban đêm (thường từ 22h đến 5h sáng).",
+    "class_id": 43
+  },
+  {
+    "id": "P.127b",
+    "ma_bien": "P.127b",
+    "ten_bien": "Biển ghép tốc độ tối đa theo làn",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Quy định tốc độ tối đa cho phép chạy trên từng làn đường cụ thể.",
+    "class_id": 44
+  },
+  {
+    "id": "P.128",
+    "ma_bien": "P.128",
+    "ten_bien": "Cấm sử dụng còi",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Nghiêm cấm các loại xe bóp còi hơi hoặc rú còi trong khu dân cư, đô thị.",
+    "class_id": 45
+  },
+  {
+    "id": "P.129",
+    "ma_bien": "P.129",
+    "ten_bien": "Kiểm tra",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Bắt buộc các xe phải dừng lại để kiểm tra tại trạm thuế, trạm kiểm soát liên ngành.",
+    "class_id": 46
+  },
+  {
+    "id": "P.130",
+    "ma_bien": "P.130",
+    "ten_bien": "Cấm dừng xe và đỗ xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe dừng và đỗ ở phía đường đặt biển.",
+    "class_id": 47
+  },
+  {
+    "id": "P.131a",
+    "ma_bien": "P.131a",
+    "ten_bien": "Cấm đỗ xe",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm các xe đỗ (vẫn được phép dừng nhanh để bốc xếp hoặc trả khách).",
+    "class_id": 48
+  },
+  {
+    "id": "P.131b",
+    "ma_bien": "P.131b",
+    "ten_bien": "Cấm đỗ xe ngày lẻ",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm đỗ xe vào các ngày dương lịch là số lẻ (1, 3, 5...).",
+    "class_id": 49
+  },
+  {
+    "id": "P.131c",
+    "ma_bien": "P.131c",
+    "ten_bien": "Cấm đỗ xe ngày chẵn",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm đỗ xe vào các ngày dương lịch là số chẵn (2, 4, 6...).",
+    "class_id": 50
+  },
+  {
+    "id": "P.132",
+    "ma_bien": "P.132",
+    "ten_bien": "Nhường đường cho xe ngược chiều",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Bắt buộc xe phải nhường đường cho xe cơ giới ngược chiều qua đoạn đường hẹp.",
+    "class_id": 51
+  },
+  {
+    "id": "DP.133",
+    "ma_bien": "DP.133",
+    "ten_bien": "Hết cấm vượt",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Báo hiệu kết thúc đoạn đường cấm vượt đối với các xe cơ giới.",
+    "class_id": 52
+  },
+  {
+    "id": "DP.134",
+    "ma_bien": "DP.134",
+    "ten_bien": "Hết hạn chế tốc độ tối đa",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Báo hiệu hết hiệu lực của biển tốc độ tối đa cho phép.",
+    "class_id": 53
+  },
+  {
+    "id": "DP.135",
+    "ma_bien": "DP.135",
+    "ten_bien": "Hết tất cả các lệnh cấm",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Báo hiệu hết hiệu lực của tất cả các biển cấm đã đặt trước đó.",
+    "class_id": 54
+  },
+  {
+    "id": "P.137",
+    "ma_bien": "P.137",
+    "ten_bien": "Cấm rẽ trái và rẽ phải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm tất cả phương tiện rẽ sang cả hai phía trái và phải tại ngã rẽ.",
+    "class_id": 55
+  },
+  {
+    "id": "P.139",
+    "ma_bien": "P.139",
+    "ten_bien": "Cấm đi thẳng và rẽ trái",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm phương tiện đi thẳng và rẽ trái, chỉ được phép rẽ phải.",
+    "class_id": 56
+  },
+  {
+    "id": "P.140",
+    "ma_bien": "P.140",
+    "ten_bien": "Cấm đi thẳng và rẽ phải",
+    "loai_bien": "Biển báo cấm",
+    "cong_dung": "Cấm phương tiện đi thẳng và rẽ phải, chỉ được phép rẽ trái.",
+    "class_id": 57
+  },
+  {
+    "id": "W.201a",
+    "ma_bien": "W.201a",
+    "ten_bien": "Chỗ ngoặt nguy hiểm vòng bên trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến chỗ ngoặt nguy hiểm cua gấp về bên trái.",
+    "class_id": 58
+  },
+  {
+    "id": "W.201b",
+    "ma_bien": "W.201b",
+    "ten_bien": "Chỗ ngoặt nguy hiểm vòng bên phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến chỗ ngoặt nguy hiểm cua gấp về bên phải.",
+    "class_id": 59
+  },
+  {
+    "id": "W.202a",
+    "ma_bien": "W.202a",
+    "ten_bien": "Nhiều chỗ ngoặt nguy hiểm liên tiếp trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo có từ 2 chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên cua về bên trái.",
+    "class_id": 60
+  },
+  {
+    "id": "W.202b",
+    "ma_bien": "W.202b",
+    "ten_bien": "Nhiều chỗ ngoặt nguy hiểm liên tiếp phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo có từ 2 chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên cua về bên phải.",
+    "class_id": 61
+  },
+  {
+    "id": "W.203a",
+    "ma_bien": "W.203a",
+    "ten_bien": "Đường bị thu hẹp cả hai bên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột từ cả hai bên trái và phải.",
+    "class_id": 62
+  },
+  {
+    "id": "W.203b",
+    "ma_bien": "W.203b",
+    "ten_bien": "Đường bị thu hẹp bên trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột ở phía bên trái.",
+    "class_id": 63
+  },
+  {
+    "id": "W.203c",
+    "ma_bien": "W.203c",
+    "ten_bien": "Đường bị thu hẹp bên phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo lòng đường sắp bị hẹp đột ngột ở phía bên phải.",
+    "class_id": 64
+  },
+  {
+    "id": "W.204",
+    "ma_bien": "W.204",
+    "ten_bien": "Đường hai chiều",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường phía trước có cả hai chiều xe chạy chung trên một phần đường.",
+    "class_id": 65
+  },
+  {
+    "id": "W.205a",
+    "ma_bien": "W.205a",
+    "ten_bien": "Đường giao nhau cùng cấp ngã tư",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến ngã tư giao nhau cùng cấp. Lái xe nhường đường bên phải.",
+    "class_id": 66
+  },
+  {
+    "id": "W.205b",
+    "ma_bien": "W.205b",
+    "ten_bien": "Đường giao nhau cùng cấp ngã ba trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến ngã ba giao nhau cùng cấp nhánh nằm bên trái.",
+    "class_id": 67
+  },
+  {
+    "id": "W.205c",
+    "ma_bien": "W.205c",
+    "ten_bien": "Đường giao nhau cùng cấp ngã ba phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến ngã ba giao nhau cùng cấp nhánh nằm bên phải.",
+    "class_id": 68
+  },
+  {
+    "id": "W.205d",
+    "ma_bien": "W.205d",
+    "ten_bien": "Đường giao nhau cùng cấp hình chữ T",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến nơi giao nhau đường dạng chữ T.",
+    "class_id": 69
+  },
+  {
+    "id": "W.205e",
+    "ma_bien": "W.205e",
+    "ten_bien": "Đường giao nhau cùng cấp vòng xuyến",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến nơi giao cắt có vòng xuyến đảo an toàn ở giữa.",
+    "class_id": 70
+  },
+  {
+    "id": "W.206",
+    "ma_bien": "W.206",
+    "ten_bien": "Giao nhau chạy theo vòng xuyến",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến nơi giao nhau đường bộ tổ chức di chuyển quanh vòng xuyến.",
+    "class_id": 71
+  },
+  {
+    "id": "W.207a",
+    "ma_bien": "W.207a",
+    "ten_bien": "Giao nhau với đường không ưu tiên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Bạn đang đi trên trục đường ưu tiên, sắp giao với đường nhánh (đường phụ).",
+    "class_id": 72
+  },
+  {
+    "id": "W.207b",
+    "ma_bien": "W.207b",
+    "ten_bien": "Giao không ưu tiên nhánh trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Sắp giao nhau với đường không ưu tiên nằm ở phía bên trái.",
+    "class_id": 73
+  },
+  {
+    "id": "W.207c",
+    "ma_bien": "W.207c",
+    "ten_bien": "Giao không ưu tiên nhánh phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Sắp giao nhau với đường không ưu tiên nằm ở phía bên phải.",
+    "class_id": 74
+  },
+  {
+    "id": "W.208",
+    "ma_bien": "W.208",
+    "ten_bien": "Giao nhau với đường ưu tiên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Bạn đang đi từ đường nhỏ, phải giảm tốc độ nhường đường cho xe ở đường lớn.",
+    "class_id": 75
+  },
+  {
+    "id": "W.209",
+    "ma_bien": "W.209",
+    "ten_bien": "Giao nhau có tín hiệu đèn",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo nút giao tiếp theo có đèn điều khiển giao thông (xanh, đỏ, vàng).",
+    "class_id": 76
+  },
+  {
+    "id": "W.210",
+    "ma_bien": "W.210",
+    "ten_bien": "Giao nhau với đường sắt có rào chắn",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến vị trí giao nhau với đường sắt có rào và gác chắn.",
+    "class_id": 77
+  },
+  {
+    "id": "W.211a",
+    "ma_bien": "W.211a",
+    "ten_bien": "Giao nhau với đường sắt không rào chắn",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Sắp đến vị trí giao cắt đường sắt không có rào bảo vệ, lái xe tự quan sát.",
+    "class_id": 78
+  },
+  {
+    "id": "W.211b",
+    "ma_bien": "W.211b",
+    "ten_bien": "Giao nhau với đường tàu điện",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo vị trí giao nhau của đường bộ với đường chạy tàu điện.",
+    "class_id": 79
+  },
+  {
+    "id": "W.212",
+    "ma_bien": "W.212",
+    "ten_bien": "Cầu hẹp",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp qua cầu hẹp có lòng cầu nhỏ hơn hoặc bằng 4m.",
+    "class_id": 80
+  },
+  {
+    "id": "W.213",
+    "ma_bien": "W.213",
+    "ten_bien": "Cầu tạm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đi qua cầu tạm được làm phục vụ giao thông tạm thời.",
+    "class_id": 81
+  },
+  {
+    "id": "W.214",
+    "ma_bien": "W.214",
+    "ten_bien": "Cầu xoay cầu cất",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cầu có thể xoay hoặc nâng lên để tàu thuyền qua lại bên dưới.",
+    "class_id": 82
+  },
+  {
+    "id": "W.215a",
+    "ma_bien": "W.215a",
+    "ten_bien": "Kè vực sâu phía trước",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường sắp tới chạy sát bờ sông, bờ hồ hoặc vực sâu phía trước mặt.",
+    "class_id": 83
+  },
+  {
+    "id": "W.215b",
+    "ma_bien": "W.215b",
+    "ten_bien": "Kè vực sâu bên phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường chạy sát bờ sông, vực sâu ở phía bên tay phải.",
+    "class_id": 84
+  },
+  {
+    "id": "W.215c",
+    "ma_bien": "W.215c",
+    "ten_bien": "Kè vực sâu bên trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường chạy sát bờ sông, vực sâu ở phía bên tay trái.",
+    "class_id": 85
+  },
+  {
+    "id": "W.216a",
+    "ma_bien": "W.216a",
+    "ten_bien": "Đường ngầm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường có nước chảy tràn qua bề mặt thường xuyên hoặc theo mùa.",
+    "class_id": 86
+  },
+  {
+    "id": "W.216b",
+    "ma_bien": "W.216b",
+    "ten_bien": "Đường ngầm nguy cơ lũ quét",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường ngầm thường xuyên có lũ quét tràn qua cực kỳ nguy hiểm.",
+    "class_id": 87
+  },
+  {
+    "id": "W.217",
+    "ma_bien": "W.217",
+    "ten_bien": "Bến phà",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đến bến phà trung chuyển phương tiện qua sông.",
+    "class_id": 88
+  },
+  {
+    "id": "W.218",
+    "ma_bien": "W.218",
+    "ten_bien": "Cửa chui",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đi qua gầm cầu vượt, cổng hầm hẹp giới hạn chiều cao.",
+    "class_id": 89
+  },
+  {
+    "id": "W.219",
+    "ma_bien": "W.219",
+    "ten_bien": "Dốc xuống nguy hiểm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường dốc xuống dài và dốc lớn. Cần đi số thấp để hãm phanh động cơ.",
+    "class_id": 90
+  },
+  {
+    "id": "W.220",
+    "ma_bien": "W.220",
+    "ten_bien": "Dốc lên nguy hiểm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường dốc đi lên cao dốc nguy hiểm, cần chủ động đi số thấp để lấy đà.",
+    "class_id": 91
+  },
+  {
+    "id": "W.221a",
+    "ma_bien": "W.221a",
+    "ten_bien": "Đường có gồ giảm tốc",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đường có gờ giảm tốc cao để cưỡng bức giảm tốc độ.",
+    "class_id": 92
+  },
+  {
+    "id": "W.221b",
+    "ma_bien": "W.221b",
+    "ten_bien": "Đường có sóng trâu",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường bị hư hỏng lồi lõm, tạo thành các rãnh lún sâu dạng sóng trâu.",
+    "class_id": 93
+  },
+  {
+    "id": "W.222a",
+    "ma_bien": "W.222a",
+    "ten_bien": "Đường trơn trượt",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đường dễ trơn trượt khi trời mưa, bùn đất. Cần giảm tốc độ tối đa.",
+    "class_id": 94
+  },
+  {
+    "id": "W.222b",
+    "ma_bien": "W.222b",
+    "ten_bien": "Lề đường nguy hiểm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo lề đường không ổn định, dễ sạt lở hoặc hụt sâu, tránh đỗ sát lề.",
+    "class_id": 95
+  },
+  {
+    "id": "W.223a",
+    "ma_bien": "W.223a",
+    "ten_bien": "Vách đá nguy hiểm bên trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo vách đá sát lề đường bên trái có nguy cơ sạt lở đá xuống.",
+    "class_id": 96
+  },
+  {
+    "id": "W.223b",
+    "ma_bien": "W.223b",
+    "ten_bien": "Vách đá nguy hiểm bên phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo vách đá sát lề đường bên phải có nguy cơ sạt lở đá xuống.",
+    "class_id": 97
+  },
+  {
+    "id": "W.224",
+    "ma_bien": "W.224",
+    "ten_bien": "Đường người đi bộ cắt ngang",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo vị trí có vạch kẻ cho người đi bộ qua đường. Lái xe phải nhường đường.",
+    "class_id": 98
+  },
+  {
+    "id": "W.225",
+    "ma_bien": "W.225",
+    "ten_bien": "Trẻ em",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo gần trường học, khu vui chơi có trẻ em tự đi lại trên đường.",
+    "class_id": 99
+  },
+  {
+    "id": "W.226",
+    "ma_bien": "W.226",
+    "ten_bien": "Đường người đi xe đạp cắt ngang",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo khu vực người đi xe đạp thường xuyên cắt ngang qua đường.",
+    "class_id": 100
+  },
+  {
+    "id": "W.227",
+    "ma_bien": "W.227",
+    "ten_bien": "Công trường",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường phía trước đang sửa chữa, thi công, có công nhân và máy móc hoạt động.",
+    "class_id": 101
+  },
+  {
+    "id": "W.228a",
+    "ma_bien": "W.228a",
+    "ten_bien": "Đá lở",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo khu vực miền núi hay có đá lở bất ngờ rơi xuống lòng đường.",
+    "class_id": 102
+  },
+  {
+    "id": "W.228b",
+    "ma_bien": "W.228b",
+    "ten_bien": "Sỏi đá bắn lên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đường trải sỏi dễ bắn lên gây vỡ kính hoặc nguy hiểm cho xe khác.",
+    "class_id": 103
+  },
+  {
+    "id": "W.229",
+    "ma_bien": "W.229",
+    "ten_bien": "Dải máy bay lên xuống",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Đoạn đường sát sân bay, máy bay cất hạ cánh tầm thấp gây tiếng động mạnh bất ngờ.",
+    "class_id": 104
+  },
+  {
+    "id": "W.230",
+    "ma_bien": "W.230",
+    "ten_bien": "Gia súc",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo khu chăn thả thường xuyên có trâu bò thả rông qua đường.",
+    "class_id": 105
+  },
+  {
+    "id": "W.231",
+    "ma_bien": "W.231",
+    "ten_bien": "Thú rừng vượt qua đường",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Khu bảo tồn thiên nhiên, rừng quốc gia có động vật hoang dã băng qua đường.",
+    "class_id": 106
+  },
+  {
+    "id": "W.232",
+    "ma_bien": "W.232",
+    "ten_bien": "Gió ngang",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo khu vực cầu cao, đèo dốc thường xuyên có gió thổi ngang cực mạnh gây mất lái.",
+    "class_id": 107
+  },
+  {
+    "id": "W.233",
+    "ma_bien": "W.233",
+    "ten_bien": "Nguy hiểm khác",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo các nguy hiểm bất ngờ khác chưa được phân loại cụ thể.",
+    "class_id": 108
+  },
+  {
+    "id": "W.234",
+    "ma_bien": "W.234",
+    "ten_bien": "Giao nhau với đường hai chiều",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Bạn đang đi trên đường một chiều, chuẩn bị giao cắt với đường đi hai chiều.",
+    "class_id": 109
+  },
+  {
+    "id": "W.235",
+    "ma_bien": "W.235",
+    "ten_bien": "Đường đôi",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo sắp đi vào đoạn đường chia đôi thành hai chiều bằng dải phân cách cứng.",
+    "class_id": 110
+  },
+  {
+    "id": "W.236",
+    "ma_bien": "W.236",
+    "ten_bien": "Hết đường đôi",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu kết thúc đoạn đường có dải phân cách chia hai chiều, đi vào đường hai chiều thông thường.",
+    "class_id": 111
+  },
+  {
+    "id": "W.239",
+    "ma_bien": "W.239",
+    "ten_bien": "Đường cáp điện phía trên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo phía trên đầu có đường dây cao thế chạy cắt ngang lòng đường.",
+    "class_id": 112
+  },
+  {
+    "id": "W.240",
+    "ma_bien": "W.240",
+    "ten_bien": "Đường hầm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu sắp đi vào đường hầm xuyên lòng đất hoặc núi.",
+    "class_id": 113
+  },
+  {
+    "id": "W.241",
+    "ma_bien": "W.241",
+    "ten_bien": "Ùn tắc giao thông",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường phía trước thường xuyên xảy ra kẹt xe ùn ứ nghiêm trọng.",
+    "class_id": 114
+  },
+  {
+    "id": "W.242a",
+    "ma_bien": "W.242a",
+    "ten_bien": "Nơi đường sắt giao vuông góc 1 đường",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu điểm giao cắt vuông góc trực tiếp của đường bộ với 1 tuyến đường sắt.",
+    "class_id": 115
+  },
+  {
+    "id": "W.242b",
+    "ma_bien": "W.242b",
+    "ten_bien": "Nơi đường sắt giao vuông góc nhiều đường",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu điểm giao cắt vuông góc trực tiếp của đường bộ với từ 2 ray đường sắt trở lên.",
+    "class_id": 116
+  },
+  {
+    "id": "W.243a",
+    "ma_bien": "W.243a",
+    "ten_bien": "Đường sắt giao không vuông góc 50m",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 50m (biển có 1 vạch đỏ).",
+    "class_id": 117
+  },
+  {
+    "id": "W.243b",
+    "ma_bien": "W.243b",
+    "ten_bien": "Đường sắt giao không vuông góc 100m",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 100m (biển có 2 vạch đỏ).",
+    "class_id": 118
+  },
+  {
+    "id": "W.243c",
+    "ma_bien": "W.243c",
+    "ten_bien": "Đường sắt giao không vuông góc 150m",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo điểm giao chéo đường sắt không vuông góc còn cách 150m (biển có 3 vạch đỏ).",
+    "class_id": 119
+  },
+  {
+    "id": "W.244",
+    "ma_bien": "W.244",
+    "ten_bien": "Đoạn đường hay xảy ra tai nạn",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo đoạn đường phía trước 'đen' về tai nạn, yêu cầu cực kỳ cẩn trọng.",
+    "class_id": 120
+  },
+  {
+    "id": "W.245a",
+    "ma_bien": "W.245a",
+    "ten_bien": "Đi chậm",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Yêu cầu lái xe bắt buộc phải giảm tốc độ tối đa, chú ý quan sát.",
+    "class_id": 121
+  },
+  {
+    "id": "W.245b",
+    "ma_bien": "W.245b",
+    "ten_bien": "Đi chậm có chỉ dẫn tiếng Anh",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Biển cảnh báo đi chậm kết hợp chữ 'SLOW' hướng dẫn người nước ngoài.",
+    "class_id": 122
+  },
+  {
+    "id": "W.246a",
+    "ma_bien": "W.246a",
+    "ten_bien": "Chú ý chướng ngại vật tránh bên trái",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu chướng ngại vật trên đường, phương tiện phải rẽ tránh sang phía bên trái.",
+    "class_id": 123
+  },
+  {
+    "id": "W.246b",
+    "ma_bien": "W.246b",
+    "ten_bien": "Chú ý chướng ngại vật tránh bên phải",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Báo hiệu chướng ngại vật trên đường, phương tiện phải rẽ tránh sang phía bên phải.",
+    "class_id": 124
+  },
+  {
+    "id": "W.246c",
+    "ma_bien": "W.246c",
+    "ten_bien": "Chú ý chướng ngại vật tránh hai bên",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Chướng ngại vật nằm chính giữa, phương tiện đi tránh sang bên trái hoặc bên phải đều được.",
+    "class_id": 125
+  },
+  {
+    "id": "W.247",
+    "ma_bien": "W.247",
+    "ten_bien": "Chú ý xe đỗ trên đường",
+    "loai_bien": "Biển báo nguy hiểm",
+    "cong_dung": "Cảnh báo phía trước thường có xe tải, container đỗ cố định bên lề khuất tầm nhìn.",
+    "class_id": 126
+  },
+  {
+    "id": "R.301a",
+    "ma_bien": "R.301a",
+    "ten_bien": "Hướng đi thẳng phải theo",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Bắt buộc phương tiện chỉ được phép đi thẳng, cấm rẽ trái rẽ phải.",
+    "class_id": 127
+  },
+  {
+    "id": "R.301b",
+    "ma_bien": "R.301b",
+    "ten_bien": "Hướng rẽ phải phải theo",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Bắt buộc phương tiện chỉ được rẽ phải tại ngã rẽ.",
+    "class_id": 128
+  },
+  {
+    "id": "R.301c",
+    "ma_bien": "R.301c",
+    "ten_bien": "Hướng rẽ trái phải theo",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Bắt buộc phương tiện chỉ được rẽ trái tại ngã rẽ.",
+    "class_id": 129
+  },
+  {
+    "id": "R.301d",
+    "ma_bien": "R.301d",
+    "ten_bien": "Hướng rẽ phải trước biển",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Yêu cầu rẽ phải ngay tại lối rẽ trước vị trí đặt biển báo.",
+    "class_id": 130
+  },
+  {
+    "id": "R.301e",
+    "ma_bien": "R.301e",
+    "ten_bien": "Hướng rẽ trái trước biển",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Yêu cầu rẽ trái ngay tại lối rẽ trước vị trí đặt biển báo.",
+    "class_id": 131
+  },
+  {
+    "id": "R.301f",
+    "ma_bien": "R.301f",
+    "ten_bien": "Hướng đi thẳng và rẽ phải",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Chỉ được phép di chuyển đi thẳng hoặc bẻ lái sang bên phải.",
+    "class_id": 132
+  },
+  {
+    "id": "R.301g",
+    "ma_bien": "R.301g",
+    "ten_bien": "Hướng đi thẳng và rẽ trái",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Chỉ được phép di chuyển đi thẳng hoặc bẻ lái sang bên trái.",
+    "class_id": 133
+  },
+  {
+    "id": "R.301h",
+    "ma_bien": "R.301h",
+    "ten_bien": "Hướng rẽ trái và rẽ phải",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Chỉ được phép rẽ trái hoặc rẽ phải tại nút giao, cấm đi thẳng.",
+    "class_id": 134
+  },
+  {
+    "id": "R.302a",
+    "ma_bien": "R.302a",
+    "ten_bien": "Vòng chướng ngại vật sang phải",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hiệu lệnh bắt buộc lái xe đi tránh chướng ngại vật theo hướng bên phải.",
+    "class_id": 135
+  },
+  {
+    "id": "R.302b",
+    "ma_bien": "R.302b",
+    "ten_bien": "Vòng chướng ngại vật sang trái",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hiệu lệnh bắt buộc lái xe đi tránh chướng ngại vật theo hướng bên trái.",
+    "class_id": 136
+  },
+  {
+    "id": "R.302c",
+    "ma_bien": "R.302c",
+    "ten_bien": "Vòng chướng ngại vật cả hai bên",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hiệu lệnh tránh chướng ngại vật từ cả hai hướng trái hoặc phải đều được.",
+    "class_id": 137
+  },
+  {
+    "id": "R.303",
+    "ma_bien": "R.303",
+    "ten_bien": "Nơi giao nhau chạy theo vòng xuyến",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Bắt buộc tất cả phương tiện vào nút giao phải chuyển hướng di chuyển quanh vòng xuyến.",
+    "class_id": 138
+  },
+  {
+    "id": "R.304",
+    "ma_bien": "R.304",
+    "ten_bien": "Đường dành cho xe thô sơ",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Đường thiết kế riêng cho xe thô sơ và người đi bộ, xe cơ giới cấm đi vào.",
+    "class_id": 139
+  },
+  {
+    "id": "R.305",
+    "ma_bien": "R.305",
+    "ten_bien": "Đường dành cho người đi bộ",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Đường dành riêng cho người bộ hành, nghiêm cấm tất cả phương tiện cơ giới/thô sơ đi vào.",
+    "class_id": 140
+  },
+  {
+    "id": "R.306",
+    "ma_bien": "R.306",
+    "ten_bien": "Tốc độ tối thiểu cho phép",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Bắt buộc phương tiện phải chạy bằng hoặc nhanh hơn trị số ghi trên biển.",
+    "class_id": 141
+  },
+  {
+    "id": "R.307",
+    "ma_bien": "R.307",
+    "ten_bien": "Hết hạn chế tốc độ tối thiểu",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Báo hiệu hết hiệu lực bắt buộc tốc độ chạy tối thiểu.",
+    "class_id": 142
+  },
+  {
+    "id": "R.308a",
+    "ma_bien": "R.308a",
+    "ten_bien": "Tuyến đường cầu vượt cắt ngang bên phải",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Biểu thị tuyến đường cầu vượt cắt qua phía bên phải trục di chuyển.",
+    "class_id": 143
+  },
+  {
+    "id": "R.308b",
+    "ma_bien": "R.308b",
+    "ten_bien": "Tuyến đường cầu vượt cắt ngang bên trái",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Biểu thị tuyến đường cầu vượt cắt qua phía bên trái trục di chuyển.",
+    "class_id": 144
+  },
+  {
+    "id": "R.309",
+    "ma_bien": "R.309",
+    "ten_bien": "Ấn còi",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Báo hiệu bắt buộc lái xe phải bóp còi để cảnh báo (thường ở cua đèo hiểm hóc).",
+    "class_id": 145
+  },
+  {
+    "id": "R.310",
+    "ma_bien": "R.310",
+    "ten_bien": "Hết hạn chế tốc độ tối thiểu",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hết tác dụng của lệnh chạy tốc độ tối thiểu trên đường cao tốc.",
+    "class_id": 146
+  },
+  {
+    "id": "R.403a",
+    "ma_bien": "R.403a",
+    "ten_bien": "Đường dành cho xe ô tô",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Đường được thiết kế chuyên dụng dành riêng cho ô tô di chuyển.",
+    "class_id": 147
+  },
+  {
+    "id": "R.403b",
+    "ma_bien": "R.403b",
+    "ten_bien": "Đường dành cho ô tô xe máy",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Đường dành riêng cho cả xe ô tô và xe máy đi chung.",
+    "class_id": 148
+  },
+  {
+    "id": "R.404a",
+    "ma_bien": "R.404a",
+    "ten_bien": "Hết đường dành cho xe ô tô",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hết đoạn đường dành riêng cho xe ô tô hoạt động.",
+    "class_id": 149
+  },
+  {
+    "id": "R.404b",
+    "ma_bien": "R.404b",
+    "ten_bien": "Hết đường dành cho ô tô xe máy",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Hết đoạn đường dành riêng cho ô tô xe máy đi chung.",
+    "class_id": 150
+  },
+  {
+    "id": "R.411",
+    "ma_bien": "R.411",
+    "ten_bien": "Hướng đi trên mỗi làn đường",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Chỉ dẫn hướng di chuyển bắt buộc tuân theo trên từng làn đường cụ thể.",
+    "class_id": 151
+  },
+  {
+    "id": "R.412a",
+    "ma_bien": "R.412a",
+    "ten_bien": "Làn đường dành cho ô tô khách",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô khách hoạt động.",
+    "class_id": 152
+  },
+  {
+    "id": "R.412b",
+    "ma_bien": "R.412b",
+    "ten_bien": "Làn đường dành cho ô tô con",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô con hoạt động.",
+    "class_id": 153
+  },
+  {
+    "id": "R.412c",
+    "ma_bien": "R.412c",
+    "ten_bien": "Làn đường dành cho ô tô tải",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Làn đường quy định chỉ dành riêng cho xe ô tô tải hoạt động.",
+    "class_id": 154
+  },
+  {
+    "id": "R.412d",
+    "ma_bien": "R.412d",
+    "ten_bien": "Làn đường dành cho xe máy",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Làn đường quy định chỉ dành riêng cho xe máy hoạt động.",
+    "class_id": 155
+  },
+  {
+    "id": "R.415",
+    "ma_bien": "R.415",
+    "ten_bien": "Biển gộp làn đường theo phương tiện",
+    "loai_bien": "Biển hiệu lệnh",
+    "cong_dung": "Biển hiệu lệnh gộp làn, quy định loại phương tiện được phép đi trên từng làn.",
+    "class_id": 156
+  },
+  {
+    "id": "I.401",
+    "ma_bien": "I.401",
+    "ten_bien": "Bắt đầu đường ưu tiên",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn bắt đầu trục đường ưu tiên, phương tiện được quyền qua ngã giao cắt trước.",
+    "class_id": 157
+  },
+  {
+    "id": "I.402",
+    "ma_bien": "I.402",
+    "ten_bien": "Hết đoạn đường ưu tiên",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Báo kết thúc đoạn đường ưu tiên. Từ đây tuân thủ luật nhường đường chuẩn.",
+    "class_id": 158
+  },
+  {
+    "id": "I.405a",
+    "ma_bien": "I.405a",
+    "ten_bien": "Đường cụt bên phải",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn ngõ rẽ sang phía bên phải là đường cụt không thông.",
+    "class_id": 159
+  },
+  {
+    "id": "I.405b",
+    "ma_bien": "I.405b",
+    "ten_bien": "Đường cụt bên trái",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn ngõ rẽ sang phía bên trái là đường cụt không thông.",
+    "class_id": 160
+  },
+  {
+    "id": "I.407a",
+    "ma_bien": "I.407a",
+    "ten_bien": "Đường một chiều",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn đoạn đường chạy một chiều, cấm lùi xe quay đầu ngược dòng.",
+    "class_id": 161
+  },
+  {
+    "id": "I.407b",
+    "ma_bien": "I.407b",
+    "ten_bien": "Đường một chiều rẽ phải",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn lối rẽ phải đi vào một con đường chạy một chiều.",
+    "class_id": 162
+  },
+  {
+    "id": "I.408",
+    "ma_bien": "I.408",
+    "ten_bien": "Nơi đỗ xe",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn khu vực bãi đỗ xe công cộng được phép đỗ xe lâu dài.",
+    "class_id": 163
+  },
+  {
+    "id": "I.408a",
+    "ma_bien": "I.408a",
+    "ten_bien": "Nơi đỗ xe một phần trên vỉa hè",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn đỗ xe sao cho bánh bên phải gác một phần lên vỉa hè đường.",
+    "class_id": 164
+  },
+  {
+    "id": "I.414a",
+    "ma_bien": "I.414a",
+    "ten_bien": "Chỉ hướng đường",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ hướng di chuyển và khoảng cách (km) đến các địa danh phía trước.",
+    "class_id": 165
+  },
+  {
+    "id": "I.417",
+    "ma_bien": "I.417",
+    "ten_bien": "Chỉ hướng cầu vượt",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ hướng đi tránh chướng ngại vật bằng cách đi lên cầu vượt.",
+    "class_id": 166
+  },
+  {
+    "id": "I.423a",
+    "ma_bien": "I.423a",
+    "ten_bien": "Đường người đi bộ sang ngang",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ vị trí sơn kẻ đường dành riêng cho người bộ hành đi qua lộ trình.",
+    "class_id": 167
+  },
+  {
+    "id": "I.423b",
+    "ma_bien": "I.423b",
+    "ten_bien": "Đường người đi bộ sang ngang bên trái",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ vị trí lối sang đường nằm lệch về hướng bên trái của đường.",
+    "class_id": 168
+  },
+  {
+    "id": "I.424a",
+    "ma_bien": "I.424a",
+    "ten_bien": "Cầu vượt qua đường cho người đi bộ",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn vị trí cầu đi bộ trên cao giúp người bộ hành sang đường an toàn.",
+    "class_id": 169
+  },
+  {
+    "id": "I.424b",
+    "ma_bien": "I.424b",
+    "ten_bien": "Hầm chui qua đường cho người đi bộ",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn vị trí hầm chui dưới lòng đất giúp người bộ hành sang đường.",
+    "class_id": 170
+  },
+  {
+    "id": "I.439",
+    "ma_bien": "I.439",
+    "ten_bien": "Tên đường",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Báo hiệu tên của con đường, phố hoặc đại lộ phương tiện đang đi qua.",
+    "class_id": 171
+  },
+  {
+    "id": "I.440",
+    "ma_bien": "I.440",
+    "ten_bien": "Di tích lịch sử",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn lối đi đến các di tích lịch sử, danh lam thắng cảnh khu vực lân cận.",
+    "class_id": 172
+  },
+  {
+    "id": "I.441a",
+    "ma_bien": "I.441a",
+    "ten_bien": "Báo hiệu phía trước có công trường",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn từ xa sắp đi qua khu vực đang thi công công trình đường bộ.",
+    "class_id": 173
+  },
+  {
+    "id": "I.443",
+    "ma_bien": "I.443",
+    "ten_bien": "Xe kéo moóc",
+    "loai_bien": "Biển chỉ dẫn",
+    "cong_dung": "Chỉ dẫn làn đường cho phép xe tải kéo theo rơ-moóc hoạt động.",
+    "class_id": 174
+  },
+  {
+    "id": "S.501",
+    "ma_bien": "S.501",
+    "ten_bien": "Phạm vi tác dụng của biển",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Thông báo chiều dài đoạn đường áp dụng hiệu lực biển chính (có hai mũi tên dọc).",
+    "class_id": 175
+  },
+  {
+    "id": "S.502",
+    "ma_bien": "S.502",
+    "ten_bien": "Khoảng cách đến đối tượng báo hiệu",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Thông báo cự ly từ biển đến vị trí nguy hiểm thực tế (không có mũi tên).",
+    "class_id": 176
+  },
+  {
+    "id": "S.503a",
+    "ma_bien": "S.503a",
+    "ten_bien": "Hướng tác dụng trái",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ hiệu lực biển chính tác dụng hướng lệch về góc bên trái.",
+    "class_id": 177
+  },
+  {
+    "id": "S.503b",
+    "ma_bien": "S.503b",
+    "ten_bien": "Hướng tác dụng phải",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ hiệu lực biển chính tác dụng hướng lệch về góc bên phải.",
+    "class_id": 178
+  },
+  {
+    "id": "S.503c",
+    "ma_bien": "S.503c",
+    "ten_bien": "Hướng tác dụng cả hai bên",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ biển chính áp dụng hiệu lực cho cả hai hướng trái và phải.",
+    "class_id": 179
+  },
+  {
+    "id": "S.504",
+    "ma_bien": "S.504",
+    "ten_bien": "Làn đường",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ biển báo chính đi kèm chỉ áp dụng duy nhất cho làn đường cụ thể treo biển.",
+    "class_id": 180
+  },
+  {
+    "id": "S.505a",
+    "ma_bien": "S.505a",
+    "ten_bien": "Loại xe",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ biển báo chính chỉ áp đặt cho dòng xe vẽ trên hình (ví dụ: hình xe tải).",
+    "class_id": 181
+  },
+  {
+    "id": "S.506a",
+    "ma_bien": "S.506a",
+    "ten_bien": "Hướng đường ưu tiên",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Chỉ rõ sơ đồ hướng di chuyển chính được ưu tiên tại ngã tư giao nhau.",
+    "class_id": 182
+  },
+  {
+    "id": "S.507",
+    "ma_bien": "S.507",
+    "ten_bien": "Hướng rẽ nguy hiểm",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Sơn mũi tên chỉ hướng rẽ cong nguy hiểm tại các đèo dốc khuất tầm nhìn.",
+    "class_id": 183
+  },
+  {
+    "id": "S.508a",
+    "ma_bien": "S.508a",
+    "ten_bien": "Biểu thị thời gian",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Quy định khung giờ áp dụng hiệu lực của biển báo chính.",
+    "class_id": 184
+  },
+  {
+    "id": "S.509a",
+    "ma_bien": "S.509a",
+    "ten_bien": "Thuyết minh biển chính",
+    "loai_bien": "Biển phụ",
+    "cong_dung": "Bảng phụ ghi chú thêm thông tin chữ thuyết minh cho biển báo phía trên.",
+    "class_id": 185
+  }
 ]
