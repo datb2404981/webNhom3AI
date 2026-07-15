@@ -489,82 +489,47 @@
     </div>
 
     <script>
-      // --- CƠ SỞ DỮ LIỆU MOCK BIỂN BÁO (Đồng bộ cấu trúc loại bỏ mức phạt) ---
-      const SIGN_DATABASE = {
+      // ─── Fallback mock (dùng khi localStorage không có data) ───────────────────
+      const SIGN_DATABASE_FALLBACK = {
         "P.102": {
           ma_bien: "P.102",
           ten_bien: "Biển báo cấm đi ngược chiều",
           loai_bien: "Biển báo cấm",
-          cong_dung:
-            "Báo đường cấm tất cả các loại xe (cơ giới và thô sơ) đi vào theo chiều đặt biển, trừ các xe được ưu tiên theo quy định (xe chữa cháy đi làm nhiệm vụ, xe quân sự, xe công an đi làm nhiệm vụ khẩn cấp, xe cứu thương, xe hộ đê, xe đi làm nhiệm vụ khắc phục sự cố thiên tai, dịch bệnh...).",
-          note: "Người đi bộ vẫn được phép di chuyển trên vỉa hè hoặc lề đường của đoạn đường cấm này.",
+          cong_dung: "Báo đường cấm tất cả các loại xe đi vào theo chiều đặt biển, trừ các xe được ưu tiên.",
+          note: "Người đi bộ vẫn được phép di chuyển trên vỉa hè.",
           tips: [
             "Tuyệt đối không điều khiển phương tiện đi vào đường này theo chiều đặt biển.",
-            "Nhanh chóng xi-nhan rẽ sang hướng khác hoặc quay đầu xe tại ngã rẽ an toàn gần nhất.",
-            "Chú ý đề phòng các phương tiện đi đúng chiều lao ra bất ngờ với tốc độ cao.",
+            "Nhanh chóng quay đầu xe tại ngã rẽ an toàn gần nhất.",
+            "Chú ý đề phòng các phương tiện đi đúng chiều lao ra bất ngờ.",
           ],
-          svg: `<div class="relative w-44 h-44 md:w-56 md:h-56 rounded-full border-[10px] border-prohibitive-red bg-white flex items-center justify-center shadow-md transform rotate-[-2deg] transition-transform hover:rotate-0 duration-300">
-                    <div class="w-[82%] h-6 md:h-8 bg-prohibitive-red rounded"></div>
-                  </div>`,
-        },
-        "W.201a": {
-          ma_bien: "W.201a",
-          ten_bien: "Chỗ ngoặt nguy hiểm vòng bên trái",
-          loai_bien: "Biển báo nguy hiểm",
-          cong_dung:
-            "Báo trước sắp đến một chỗ ngoặt nguy hiểm vòng sang phía bên trái. Người điều khiển cần chủ động điều chỉnh vận tốc, làm chủ tay lái để đề phòng mất đà trượt bánh lái.",
-          note: "Chú ý giảm tốc độ đặc biệt khi đường trơn ướt hoặc tầm nhìn bị hạn chế do thời tiết sương mù.",
-          tips: [
-            "Chủ động giảm tốc độ trước khi bắt đầu rẽ vào góc cua nguy hiểm.",
-            "Không thực hiện hành vi vượt xe khác khi đang di chuyển qua đoạn cua khuất tầm nhìn.",
-            "Giữ vững tay lái, đi đúng phần làn đường quy định, tránh lấn vạch phân làn.",
-          ],
-          svg: `<div class="relative w-40 h-40 md:w-48 md:h-48 bg-warning-yellow rounded-xl rotate-45 border-[8px] border-asphalt-ink flex items-center justify-center shadow-md transition-transform hover:scale-105 duration-300">
-                    <div class="-rotate-45 flex items-center justify-center w-full h-full p-4">
-                        <svg viewBox="0 0 100 100" class="w-20 h-20 stroke-asphalt-ink fill-none stroke-[10] stroke-linecap-round stroke-linejoin-round">
-                            <path d="M65 70 L65 50 A 15 15 0 0 0 50 35 L30 35" />
-                            <path d="M40 45 L30 35 L40 25" />
-                        </svg>
-                    </div>
-                  </div>`,
-        },
-        "R.301a": {
-          ma_bien: "R.301a",
-          ten_bien: "Các hướng đi phải theo (Đi thẳng)",
-          loai_bien: "Biển hiệu lệnh",
-          cong_dung:
-            "Báo hiệu các loại xe chỉ được đi thẳng qua khu vực giao lộ đặt biển báo, không được phép rẽ trái, rẽ phải hoặc quay đầu xe hành trình ngược lại (ngoại trừ các xe ưu tiên).",
-          note: "Biển hiệu lệnh thường bắt đầu có hiệu lực từ phía sau vị trí cắm cột biển báo.",
-          tips: [
-            "Giữ đều tốc độ và tiếp tục đi thẳng trực diện qua nút giao giao lộ.",
-            "Không thực hiện thao tác xi-nhan báo rẽ hoặc quay đầu xe tại nơi có cắm biển báo hiệu lệnh này.",
-            "Quan sát hệ thống biển phụ kèm theo bên dưới để biết biển áp dụng cho loại xe cụ thể nào.",
-          ],
-          svg: `<div class="relative w-44 h-44 md:w-56 md:h-56 rounded-full border-[8px] border-white bg-regulatory-blue flex items-center justify-center shadow-md transition-transform hover:scale-105 duration-300">
-                    <svg viewBox="0 0 100 100" class="w-20 h-20 fill-white">
-                        <path d="M50 15 L25 45 L42 45 L42 85 L58 85 L58 45 L75 45 Z" />
-                    </svg>
-                  </div>`,
-        },
-        "I.407a": {
-          ma_bien: "I.407a",
-          ten_bien: "Đường một chiều",
-          loai_bien: "Biển chỉ dẫn",
-          cong_dung:
-            "Chỉ dẫn những đoạn đường chạy một chiều theo hướng mũi tên chỉ. Tuyệt đối không được quay đầu xe đi ngược lại hoặc đi lùi trên làn đường một chiều.",
-          note: "Phương tiện được phép di chuyển ra vào làn từ các ngõ ngách nếu tuân thủ rẽ đúng chiều quy định.",
-          tips: [
-            "Đi đúng hướng mũi tên chỉ dẫn, chọn làn đường phù hợp với phương tiện của mình.",
-            "Tuyệt đối không được đi lùi xe hoặc thực hiện hành động quay đầu xe trên toàn tuyến.",
-            "Chú ý biển chỉ dẫn phụ tại các nút giao tiếp theo để nắm thông tin rẽ chuyển làn.",
-          ],
-          svg: `<div class="relative w-40 h-40 md:w-48 md:h-48 rounded-lg border-[8px] border-white bg-regulatory-blue flex items-center justify-center shadow-md transition-transform hover:scale-105 duration-300">
-                    <svg viewBox="0 0 100 100" class="w-20 h-20 fill-white">
-                        <path d="M50 15 L25 45 L42 45 L42 85 L58 85 L58 45 L75 45 Z" />
-                    </svg>
-                  </div>`,
+          svg: `<div class="relative w-44 h-44 rounded-full border-[10px] border-prohibitive-red bg-white flex items-center justify-center shadow-md">
+                  <div class="w-[82%] h-7 bg-prohibitive-red rounded"></div>
+                </div>`,
         },
       };
+
+      // ─── Tạo tips mặc định theo loại biển ──────────────────────────────────────
+      function getDefaultTips(loai_bien) {
+        if (loai_bien && loai_bien.toLowerCase().includes("cấm")) {
+          return [
+            "Tuyệt đối chấp hành biển báo cấm để đảm bảo an toàn giao thông.",
+            "Kiểm tra kỹ biển báo trước khi di chuyển vào khu vực bị hạn chế.",
+            "Vi phạm biển báo cấm có thể bị xử phạt theo quy định của pháp luật.",
+          ];
+        } else if (loai_bien && loai_bien.toLowerCase().includes("nguy hiểm")) {
+          return [
+            "Giảm tốc độ và tăng cường chú ý khi gặp biển báo nguy hiểm.",
+            "Tăng khoảng cách an toàn với xe phía trước.",
+            "Không vượt xe tại khu vực có biển báo nguy hiểm.",
+          ];
+        } else {
+          return [
+            "Chấp hành đúng hiệu lệnh của biển báo.",
+            "Quan sát biển phụ kèm theo để hiểu rõ phạm vi áp dụng.",
+            "Luôn ưu tiên an toàn giao thông khi di chuyển.",
+          ];
+        }
+      }
 
       // --- LOGIC HÀNH VI ĐIỀU KHIỂN TRANG ---
 
@@ -598,69 +563,84 @@
       }
 
       function renderSignData() {
-        // Lấy dữ liệu biển báo từ localStorage (hoặc mặc định là P.102 nếu trống)
-        let signId = localStorage.getItem("scannedSignId") || "P.102";
-        let signData = SIGN_DATABASE[signId];
+        // Ưu tiên đọc dữ liệu thực từ backend (qua localStorage)
+        let signData = null;
+        const storedData = localStorage.getItem("scannedSignData");
 
+        if (storedData) {
+          try {
+            signData = JSON.parse(storedData);
+          } catch (e) {
+            console.error("Lỗi parse localStorage:", e);
+          }
+        }
+
+        // Fallback về mock nếu không có data thực
         if (!signData) {
-          signData = SIGN_DATABASE["P.102"]; // Fallback phòng ngừa lỗi
+          signData = SIGN_DATABASE_FALLBACK["P.102"];
+        }
+
+        // Bổ sung tips và note nếu thiếu
+        if (!signData.tips || signData.tips.length === 0) {
+          signData.tips = getDefaultTips(signData.loai_bien);
+        }
+        if (!signData.note) {
+          signData.note = `Biển báo thuộc nhóm ${signData.loai_bien || "giao thông"} theo QCVN 41:2019/BGTVT.`;
         }
 
         // 1. Cập nhật các trường thông tin cơ bản
+        // Mapping: traffic_signs.json → DOM elements
         document.getElementById("sign-code").textContent =
-          `MÃ: ${signData.ma_bien}`;
-        document.getElementById("sign-name").textContent = signData.ten_bien;
+          `MÃ: ${signData.ma_bien || signData.id || "---"}`;
+        document.getElementById("sign-name").textContent =
+          signData.ten_bien || "Không xác định";
         document.getElementById("sign-meaning").textContent =
-          signData.cong_dung;
+          signData.cong_dung || "Không có mô tả.";
         document.getElementById("sign-note").textContent =
           `Lưu ý: ${signData.note}`;
 
-        // Cập nhật vị trí mô phỏng ngẫu nhiên cho sinh động
-        const cities = [
-          "Hà Nội",
-          "TP. Hồ Chí Minh",
-          "Đà Nẵng",
-          "Cần Thơ",
-          "Hải Phòng",
-        ];
+        // Cập nhật vị trí mô phỏng ngẫu nhiên
+        const cities = ["Hà Nội", "TP. Hồ Chí Minh", "Đà Nẵng", "Cần Thơ", "Hải Phòng"];
         const randomCity = cities[Math.floor(Math.random() * cities.length)];
         document.getElementById("detection-location").textContent =
-          `Vị trí phát hiện: Thừa thiên Huế (Mô phỏng tại ${randomCity})`;
+          `Vị trí phát hiện: ${randomCity} (AI nhận diện)`;
 
-        // 2. Render ảnh quét thực tế hoặc Vector fallback dạng SVG
+        // 2. Render ảnh thực tế hoặc SVG fallback
         const imgElement = document.getElementById("scanned-image");
         const vectorContainer = document.getElementById("fallback-vector");
         const savedImage = localStorage.getItem("scannedImage");
 
         if (savedImage) {
-          // Hiển thị ảnh chụp từ camera hoặc tải lên của người dùng
           imgElement.src = savedImage;
           imgElement.classList.remove("hidden");
           vectorContainer.classList.add("hidden");
-        } else {
-          // Hiển thị đồ họa SVG của biển báo do không có ảnh thật
+        } else if (signData.svg) {
           vectorContainer.innerHTML = signData.svg;
+          vectorContainer.classList.remove("hidden");
+          imgElement.classList.add("hidden");
+        } else {
+          // SVG generic theo loại biển
+          vectorContainer.innerHTML = getGenericSignSVG(signData.loai_bien);
           vectorContainer.classList.remove("hidden");
           imgElement.classList.add("hidden");
         }
 
-        // 3. Cập nhật giao diện động theo "Loại biển" (Theme Colors)
-        applySignTheme(signData.loai_bien);
+        // 3. Cập nhật giao diện theo loại biển
+        applySignTheme(signData.loai_bien || "");
 
         // 4. Render danh sách hướng dẫn an toàn
         const tipsList = document.getElementById("safety-tips-list");
-        tipsList.innerHTML = ""; // Clear cũ
+        tipsList.innerHTML = "";
 
-        // Xác định icon phù hợp cho loại biển báo
         let iconName = "cancel";
         let iconColorClass = "text-prohibitive-red";
 
-        if (signData.loai_bien.includes("nguy hiểm")) {
+        if (signData.loai_bien && signData.loai_bien.includes("nguy hiểm")) {
           iconName = "warning";
           iconColorClass = "text-warning-yellow";
         } else if (
-          signData.loai_bien.includes("hiệu lệnh") ||
-          signData.loai_bien.includes("chỉ dẫn")
+          signData.loai_bien &&
+          (signData.loai_bien.includes("hiệu lệnh") || signData.loai_bien.includes("chỉ dẫn"))
         ) {
           iconName = "arrow_right_alt";
           iconColorClass = "text-regulatory-blue";
@@ -676,6 +656,25 @@
             `;
           tipsList.appendChild(li);
         });
+      }
+
+      // Tạo SVG generic khi không có SVG sẵn trong dữ liệu
+      function getGenericSignSVG(loai_bien) {
+        if (loai_bien && loai_bien.includes("cấm")) {
+          return `<div class="relative w-44 h-44 rounded-full border-[10px] border-prohibitive-red bg-white flex items-center justify-center shadow-md">
+                    <div class="w-[82%] h-7 bg-prohibitive-red rounded"></div>
+                  </div>`;
+        } else if (loai_bien && loai_bien.includes("nguy hiểm")) {
+          return `<div class="w-44 h-44 bg-warning-yellow flex items-center justify-center shadow-md" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%); border-radius: 4px;">
+                    <span class="material-symbols-outlined text-asphalt-ink text-5xl mt-12 symbol-filled">warning</span>
+                  </div>`;
+        } else {
+          return `<div class="relative w-44 h-44 rounded-full border-[8px] border-white bg-regulatory-blue flex items-center justify-center shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-20 h-20 fill-white">
+                      <path d="M50 15 L25 45 L42 45 L42 85 L58 85 L58 45 L75 45 Z" />
+                    </svg>
+                  </div>`;
+        }
       }
 
       function applySignTheme(loaiBien) {

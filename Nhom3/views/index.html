@@ -203,7 +203,7 @@
                   class="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-asphalt-ink/5 blur-xl rounded-full"
                 ></div>
                 <img
-                  src="/webNhom3AI/Nhom3/Ảnh/screen1.png"
+                  src="/images/screen1.png"
                   alt="Cute chibi character in uniform holding a camera"
                   class="relative z-10 w-full h-full object-contain"
                 />
@@ -261,7 +261,7 @@
                   class="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-asphalt-ink/5 blur-xl rounded-full"
                 ></div>
                 <img
-                  src="/webNhom3AI/Nhom3/Ảnh/screen.png"
+                  src="/images/screen.png"
                   alt="Professional holding Vietnamese traffic signs"
                   class="relative z-10 w-full h-full object-contain"
                 />
@@ -398,29 +398,17 @@
           <div
             class="relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm flex flex-col p-6 md:p-8"
           >
-            <div
-              class="mb-5 bg-surface-container p-3.5 rounded-xl border border-outline-variant/40"
-            >
-              <label
-                for="simSelector"
-                class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1"
-                >Giả lập kết quả AI:</label
-              >
-              <select
-                id="simSelector"
-                class="w-full text-sm bg-surface-container-lowest border-outline-variant/50 rounded-lg text-asphalt-ink focus:ring-warning-yellow focus:border-warning-yellow"
-              >
+            <!-- simSelector ẩn – chỉ dùng khi chế độ offline/fallback -->
+            <div id="simSelectorWrapper" class="hidden mb-5 bg-surface-container p-3.5 rounded-xl border border-outline-variant/40">
+              <label for="simSelector" class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1">Giả lập kết quả AI (offline):</label>
+              <select id="simSelector" class="w-full text-sm bg-surface-container-lowest border-outline-variant/50 rounded-lg text-asphalt-ink focus:ring-warning-yellow focus:border-warning-yellow">
                 <option value="random">--- Chọn Ngẫu Nhiên ---</option>
                 <option value="P102">P.102 - Cấm đi ngược chiều</option>
                 <option value="P130">P.130 - Cấm dừng xe và đỗ xe</option>
-                <option value="W201a">
-                  W.201a - Khúc cua nguy hiểm bên trái
-                </option>
+                <option value="W201a">W.201a - Khúc cua nguy hiểm bên trái</option>
                 <option value="R301a">R.301a - Hướng đi thẳng bắt buộc</option>
                 <option value="P106a">P.106a - Cấm xe ô tô tải</option>
-                <option value="error">
-                  --- Giả lập Lỗi Không Nhận Diện Được ---
-                </option>
+                <option value="error">--- Giả lập Lỗi Không Nhận Diện Được ---</option>
               </select>
             </div>
 
@@ -790,6 +778,7 @@
       // --- Core Interactions ---
       let currentStream = null;
       let useFrontCamera = false;
+      let selectedFile = null; // Lưu File object để gửi qua FormData
 
       // UI Target references
       const landingLayout = document.getElementById("landingLayout");
@@ -823,9 +812,10 @@
       imageInput.addEventListener("change", (e) => {
         const file = e.target.files[0];
         if (file) {
+          selectedFile = file; // Lưu lại để gửi qua FormData
           const reader = new FileReader();
           reader.onload = (event) => {
-            transitionToAnalysis(event.target.result);
+            transitionToAnalysis(event.target.result, file);
           };
           reader.readAsDataURL(file);
         }
@@ -901,115 +891,106 @@
 
         stopActiveStream();
         cameraModal.classList.add("hidden");
-        transitionToAnalysis(dataUrl);
+
+        // Chuyển dataUrl thành File object để gửi qua FormData
+        canvas.toBlob((blob) => {
+          selectedFile = new File([blob], "capture.jpg", { type: "image/jpeg" });
+          transitionToAnalysis(dataUrl, selectedFile);
+        }, "image/jpeg", 0.9);
       });
 
-      // 3. Simulated Analysis & State Transition Engine
-      function transitionToAnalysis(imageSrc) {
-        // Adjust basic view grids
+      // 3. Analysis Engine — gọi backend thực
+      async function transitionToAnalysis(imageSrc, imageFile) {
+        // Chuyển sang workspace view
         landingLayout.classList.add("hidden");
         scrollPrompt.classList.add("hidden");
         activeWorkspace.classList.remove("hidden");
 
-        // Render Preview Image
+        // Hiển thị ảnh preview
         sourceImagePreview.src = imageSrc;
         sourceImagePreview.classList.remove("hidden");
         previewPlaceholder.classList.add("hidden");
 
-        // Reset reports state
+        // Reset trạng thái báo cáo
         reportIdle.classList.add("hidden");
         reportSuccess.classList.add("hidden");
         reportError.classList.add("hidden");
 
-        // Enable loader components
+        // Hiện loading UI
         reportLoading.classList.remove("hidden");
         scanningOverlay.classList.remove("hidden");
 
-        // Mock sequential console log progress and bar updating
+        // Cập nhật log UI theo thời gian thực
         logLine1.style.opacity = "1";
-        logLine1.textContent = "> [SYSTEM]: Đang kết nối mô hình nhận diện...";
+        logLine1.textContent = "> [SYSTEM]: Đang kết nối mô hình Gemini AI...";
         logLine2.style.opacity = "0.3";
         logLine3.style.opacity = "0.3";
         logLine4.style.opacity = "0.3";
-        scanProgressBar.style.width = "10%";
+        scanProgressBar.style.width = "15%";
 
         setTimeout(() => {
           logLine2.style.opacity = "1";
-          logLine2.textContent =
-            "> [VISION]: Định vị đường viền và phân lớp hình dạng...";
-          scanProgressBar.style.width = "40%";
-        }, 600);
+          logLine2.textContent = "> [VISION]: Mã hoá ảnh và gửi đến máy chủ...";
+          scanProgressBar.style.width = "35%";
+        }, 400);
 
         setTimeout(() => {
           logLine3.style.opacity = "1";
-          logLine3.textContent =
-            "> [MODEL]: Trích lọc ma trận đặc tính biển báo VN...";
-          scanProgressBar.style.width = "75%";
-        }, 1200);
+          logLine3.textContent = "> [MODEL]: AI đang nhận diện đặc trưng biển báo VN...";
+          scanProgressBar.style.width = "60%";
+        }, 900);
 
-        setTimeout(() => {
-          logLine4.style.opacity = "1";
-          logLine4.textContent =
-            "> [RECON]: Đóng gói gói tin kết quả phân tích...";
-          scanProgressBar.style.width = "100%";
-        }, 1800);
+        // Gửi ảnh lên backend
+        let result = null;
+        let fetchError = null;
 
-        // Final Result Resolution after 2.4s
+        try {
+          const formData = new FormData();
+          formData.append("image", imageFile);
+
+          const response = await fetch("/api/recognize", {
+            method: "POST",
+            body: formData,
+          });
+
+          result = await response.json();
+        } catch (err) {
+          fetchError = err;
+          console.error("Lỗi kết nối backend:", err);
+        }
+
+        // Cập nhật log cuối
+        logLine4.style.opacity = "1";
+        logLine4.textContent = result && result.success
+          ? "> [RECON]: Nhận diện thành công — đang điều hướng..."
+          : "> [RECON]: Đã xử lý xong — kiểm tra kết quả...";
+        scanProgressBar.style.width = "100%";
+
+        // Đợi animation hoàn tất rồi xử lý kết quả
         setTimeout(() => {
           scanningOverlay.classList.add("hidden");
           reportLoading.classList.add("hidden");
 
-          const simulationSelection =
-            document.getElementById("simSelector").value;
-          let targetData = null;
-
-          if (simulationSelection === "random") {
-            const randomIndex = Math.floor(
-              Math.random() * TRAFFIC_SIGNS_DB.length,
-            );
-            targetData = TRAFFIC_SIGNS_DB[randomIndex];
-          } else if (simulationSelection === "error") {
-            targetData = null;
+          if (result && result.success) {
+            // Lưu dữ liệu vào localStorage rồi chuyển sang result.html
+            localStorage.setItem("scannedSignData", JSON.stringify(result.signData));
+            localStorage.setItem("scannedImage", result.imageBase64);
+            window.location.href = "result.html";
           } else {
-            targetData = TRAFFIC_SIGNS_DB.find(
-              (s) => s.id === simulationSelection,
-            );
-          }
-
-          if (targetData) {
-            // Populate success card metrics
-            document.getElementById("successIconContainer").innerHTML =
-              targetData.svgPath;
-            document.getElementById("signName").textContent = targetData.name;
-            document.getElementById("signCode").textContent =
-              `Mã hiệu: ${targetData.code}`;
-            document.getElementById("signDesc").textContent = targetData.desc;
-            document.getElementById("signPenalty").textContent =
-              targetData.penalty;
-            document.getElementById("signTip").textContent = targetData.tip;
-
-            // Badging setup
-            const badge = document.getElementById("badgeType");
-            badge.textContent = targetData.typeName;
-
-            if (targetData.type === "prohibitive") {
-              badge.className =
-                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-prohibitive-red bg-prohibitive-red/10 text-secondary";
-            } else if (targetData.type === "danger") {
-              badge.className =
-                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-warning-yellow bg-warning-yellow/10 text-on-primary-container";
-            } else if (targetData.type === "mandatory") {
-              badge.className =
-                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-regulatory-blue bg-regulatory-blue/10 text-regulatory-blue";
+            // Hiển thị lỗi
+            const errorMsg = document.getElementById("errorMessage");
+            if (errorMsg) {
+              if (fetchError) {
+                errorMsg.textContent = "Không thể kết nối đến máy chủ. Hãy kiểm tra server đang chạy.";
+              } else if (result && result.message) {
+                errorMsg.textContent = result.message;
+              } else {
+                errorMsg.textContent = "Không tìm thấy hoặc không xác định được hình dạng biển báo giao thông hợp lệ trong ảnh.";
+              }
             }
-
-            reportSuccess.classList.remove("hidden");
-            reportSuccess.classList.add("flex");
-          } else {
-            // Load Error state
             reportError.classList.remove("hidden");
           }
-        }, 2400);
+        }, 1200);
       }
 
       // 4. Return/Reset Control Functions
