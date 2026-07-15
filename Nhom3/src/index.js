@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
+const { test, call_ai } = require('./services');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,6 +28,9 @@ app.get('/', (req, res) => {
 
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`✅ Server chạy tại http://localhost:${PORT}`);
+  const man = await call_ai()
+  console.log(man.content)
+ 
 });
