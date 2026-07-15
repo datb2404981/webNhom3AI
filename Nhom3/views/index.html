@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="vi" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      try {
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-container": "#705e00",
+                "inverse-primary": "#e9c400",
+                "secondary-fixed": "#ffdad4",
+                outline: "#7e775f",
+                "secondary-fixed-dim": "#ffb4a8",
+                "on-tertiary-container": "#006a70",
+                "surface-container-low": "#fbf3e0",
+                "surface-container-highest": "#eae2cf",
+                primary: "#705d00",
+                "inverse-on-surface": "#f9f0dd",
+                "tertiary-fixed": "#79f5ff",
+                "on-primary-fixed-variant": "#544600",
+                "on-error-container": "#93000a",
+                "warning-yellow": "#FFD700",
+                "surface-tint": "#705d00",
+                "regulatory-blue": "#0066CC",
+                "safety-green": "#28A745",
+                "on-tertiary-fixed": "#002022",
+                surface: "#fff9ef",
+                "on-secondary-container": "#fffbff",
+                "outline-variant": "#d0c6ab",
+                "prohibitive-red": "#FF0000",
+                "surface-dim": "#e1d9c7",
+                "on-error": "#ffffff",
+                secondary: "#bc0100",
+                "inverse-surface": "#343024",
+                "on-secondary": "#ffffff",
+                "primary-container": "#ffd700",
+                "primary-fixed": "#ffe16d",
+                "fog-surface": "#F5F5F7",
+                "on-tertiary-fixed-variant": "#004f54",
+                error: "#ba1a1a",
+                "surface-variant": "#eae2cf",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed-variant": "#930100",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed-dim": "#00dbe8",
+                "on-secondary-fixed": "#410000",
+                "asphalt-ink": "#1D1D1F",
+                "tertiary-container": "#00f1ff",
+                "error-container": "#ffdad6",
+                background: "#fff9ef",
+                "on-surface": "#1f1b10",
+                "on-surface-variant": "#4d4732",
+                "primary-fixed-dim": "#e9c400",
+                "surface-bright": "#fff9ef",
+                "surface-container": "#f6edda",
+                tertiary: "#00696f",
+                "on-primary": "#ffffff",
+                "on-primary-fixed": "#221b00",
+                "on-background": "#1f1b10",
+                "surface-container-high": "#f0e7d5",
+                "secondary-container": "#eb0000",
+              },
+              borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px",
+              },
+              spacing: {
+                "margin-mobile": "16px",
+                unit: "8px",
+                "margin-desktop": "64px",
+                gutter: "24px",
+                "max-width": "1280px",
+              },
+              fontFamily: {
+                "display-hero-mobile": ["Be Vietnam Pro"],
+                "body-lg": ["Be Vietnam Pro"],
+                "headline-md": ["Be Vietnam Pro"],
+                "label-caps": ["JetBrains Mono"],
+                "display-hero": ["Be Vietnam Pro"],
+                "body-md": ["Be Vietnam Pro"],
+                "label-ui": ["Be Vietnam Pro"],
+                "headline-lg": ["Be Vietnam Pro"],
+              },
+              fontSize: {
+                "display-hero-mobile": [
+                  "36px",
+                  {
+                    lineHeight: "1.2",
+                    letterSpacing: "-0.01em",
+                    fontWeight: "700",
+                  },
+                ],
+                "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                "headline-md": [
+                  "24px",
+                  { lineHeight: "1.3", fontWeight: "600" },
+                ],
+                "label-caps": [
+                  "12px",
+                  {
+                    lineHeight: "1.0",
+                    letterSpacing: "0.1em",
+                    fontWeight: "700",
+                  },
+                ],
+                "display-hero": [
+                  "56px",
+                  {
+                    lineHeight: "1.1",
+                    letterSpacing: "-0.02em",
+                    fontWeight: "700",
+                  },
+                ],
+                "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+                "label-ui": ["14px", { lineHeight: "1.0", fontWeight: "500" }],
+                "headline-lg": [
+                  "32px",
+                  { lineHeight: "1.25", fontWeight: "600" },
+                ],
+              },
+            },
+          },
+        };
+      } catch (_e) {}
+    </script>
+    <style>
+      @keyframes scan {
+        0% {
+          top: 0%;
+          opacity: 0.8;
+        }
+        50% {
+          top: 100%;
+          opacity: 1;
+        }
+        100% {
+          top: 0%;
+          opacity: 0.8;
+        }
+      }
+      .animate-scan {
+        animation: scan 2.5s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="font-body-md text-on-background selection:bg-warning-yellow selection:text-asphalt-ink bg-surface"
+  >
+    <main
+      class="relative min-h-screen flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-12 bg-pattern"
+    >
+      <header
+        class="absolute top-8 left-0 w-full px-margin-mobile md:px-margin-desktop flex justify-center items-center pointer-events-none z-10"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <h1
+            class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-primary tracking-tighter"
+          >
+            TrafficScan <span class="text-secondary">VN</span>
+          </h1>
+          <p
+            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"
+          >
+            An Toàn Trên Mọi Nẻo Đường
+          </p>
+        </div>
+      </header>
+
+      <div class="w-full max-w-max-width flex flex-col items-center">
+        <div
+          id="landingLayout"
+          class="w-full grid grid-cols-1 md:grid-cols-2 gap-gutter items-stretch mt-32 transition-all duration-300"
+        >
+          <div
+            class="bento-card relative group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm"
+          >
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-prohibitive-red/5 -mr-12 -mt-12 rounded-full blur-2xl"
+            ></div>
+
+            <div
+              class="p-8 md:p-12 flex flex-col h-full items-center text-center"
+            >
+              <div
+                class="relative w-full aspect-square max-w-[280px] mb-8 group-hover:scale-105 transition-transform duration-500"
+              >
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-asphalt-ink/5 blur-xl rounded-full"
+                ></div>
+                <img
+                  src="/webNhom3AI/Nhom3/Ảnh/screen1.png"
+                  alt="Cute chibi character in uniform holding a camera"
+                  class="relative z-10 w-full h-full object-contain"
+                />
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <span
+                  class="font-label-caps text-label-caps text-secondary mb-3 inline-block border-b-2 border-secondary/20 pb-1 w-fit mx-auto"
+                  >AI RECOGNITION</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg text-asphalt-ink mb-4"
+                >
+                  Nhận diện trực tiếp
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-[300px] mx-auto mb-8"
+                >
+                  Sử dụng camera trên thiết bị của bạn để quét và phân tích trực
+                  tiếp biển báo giao thông trong thời gian thực.
+                </p>
+              </div>
+
+              <button
+                id="startScanBtn"
+                class="btn-hover-effect w-full max-w-[240px] py-4 bg-warning-yellow rounded-full shadow-md flex items-center justify-center gap-3 group/btn transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-asphalt-ink"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >camera_enhance</span
+                >
+                <span
+                  class="font-label-ui text-label-ui text-asphalt-ink font-bold"
+                  >Bắt đầu quét</span
+                >
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bento-card relative group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm"
+          >
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-warning-yellow/10 -mr-12 -mt-12 rounded-full blur-2xl"
+            ></div>
+
+            <div
+              class="p-8 md:p-12 flex flex-col h-full items-center text-center"
+            >
+              <div
+                class="relative w-full aspect-square max-w-[280px] mb-8 group-hover:scale-105 transition-transform duration-500"
+              >
+                <div
+                  class="absolute bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-asphalt-ink/5 blur-xl rounded-full"
+                ></div>
+                <img
+                  src="/webNhom3AI/Nhom3/Ảnh/screen.png"
+                  alt="Professional holding Vietnamese traffic signs"
+                  class="relative z-10 w-full h-full object-contain"
+                />
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <span
+                  class="font-label-caps text-label-caps text-primary mb-3 inline-block border-b-2 border-primary/20 pb-1 w-fit mx-auto"
+                  >KNOWLEDGE HUB</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg text-asphalt-ink mb-4"
+                >
+                  Nhận diện từ ảnh
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-[300px] mx-auto mb-8"
+                >
+                  Tải lên hình ảnh biển báo từ thư viện thiết bị của bạn để hệ
+                  thống AI giải mã ý nghĩa và khung hình phạt.
+                </p>
+              </div>
+
+              <button
+                id="uploadImgBtn"
+                class="btn-hover-effect w-full max-w-[240px] py-4 bg-asphalt-ink rounded-full shadow-md flex items-center justify-center gap-3 group/btn transition-transform"
+              >
+                <span class="material-symbols-outlined text-warning-yellow"
+                  >cloud_upload</span
+                >
+                <span class="font-label-ui text-label-ui text-white font-bold"
+                  >Tải ảnh lên</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="activeWorkspace"
+          class="hidden w-full grid grid-cols-1 md:grid-cols-2 gap-gutter items-stretch mt-32 px-4 md:px-0 transition-all duration-300"
+        >
+          <div
+            class="relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm flex flex-col p-6 md:p-8"
+          >
+            <h3
+              class="font-headline-md text-asphalt-ink mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-secondary"
+                >image</span
+              >
+              Hình ảnh phân tích
+            </h3>
+
+            <div
+              class="relative flex-grow min-h-[340px] bg-asphalt-ink/5 rounded-xl overflow-hidden flex items-center justify-center border-2 border-dashed border-outline-variant/50"
+            >
+              <div
+                id="scanningOverlay"
+                class="hidden absolute inset-0 z-20 bg-asphalt-ink/60 flex flex-col items-center justify-center text-white backdrop-blur-[2px]"
+              >
+                <div
+                  class="relative w-48 h-48 border-2 border-warning-yellow rounded-lg overflow-hidden shadow-2xl"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-warning-yellow to-transparent shadow-[0_0_15px_#FFD700] animate-scan"
+                  ></div>
+                  <div
+                    class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-warning-yellow"
+                  ></div>
+                  <div
+                    class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-warning-yellow"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-warning-yellow"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-warning-yellow"
+                  ></div>
+                </div>
+                <div class="mt-6 flex flex-col items-center gap-2">
+                  <p
+                    class="font-label-caps text-label-caps text-warning-yellow tracking-widest animate-pulse"
+                  >
+                    AI ĐANG QUÉT ĐẶC TRƯNG
+                  </p>
+                  <div
+                    class="w-32 h-1.5 bg-surface-container-low rounded-full overflow-hidden"
+                  >
+                    <div
+                      id="scanProgressBar"
+                      class="h-full bg-warning-yellow transition-all duration-300"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <img
+                id="sourceImagePreview"
+                src=""
+                alt="Traffic sign preview"
+                class="max-w-full max-h-[360px] object-contain rounded-lg hidden"
+              />
+
+              <div
+                id="previewPlaceholder"
+                class="text-center p-8 flex flex-col items-center gap-3 text-on-surface-variant"
+              >
+                <span class="material-symbols-outlined text-5xl"
+                  >image_not_supported</span
+                >
+                <p class="font-body-md">Chưa có hình ảnh để phân tích</p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-4 flex-wrap">
+              <button
+                id="reScanBtn"
+                class="flex-1 min-w-[120px] py-3.5 px-4 bg-surface-container hover:bg-surface-dim text-asphalt-ink font-bold rounded-full border border-outline-variant/30 flex items-center justify-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined">refresh</span> Thử ảnh
+                khác
+              </button>
+              <button
+                id="cancelWorkspaceBtn"
+                class="flex-1 min-w-[120px] py-3.5 px-4 bg-asphalt-ink hover:bg-asphalt-ink/90 text-white font-bold rounded-full flex items-center justify-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined">home</span> Trang chủ
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="relative bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden shadow-sm flex flex-col p-6 md:p-8"
+          >
+            <div
+              class="mb-5 bg-surface-container p-3.5 rounded-xl border border-outline-variant/40"
+            >
+              <label
+                for="simSelector"
+                class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1"
+                >Giả lập kết quả AI:</label
+              >
+              <select
+                id="simSelector"
+                class="w-full text-sm bg-surface-container-lowest border-outline-variant/50 rounded-lg text-asphalt-ink focus:ring-warning-yellow focus:border-warning-yellow"
+              >
+                <option value="random">--- Chọn Ngẫu Nhiên ---</option>
+                <option value="P102">P.102 - Cấm đi ngược chiều</option>
+                <option value="P130">P.130 - Cấm dừng xe và đỗ xe</option>
+                <option value="W201a">
+                  W.201a - Khúc cua nguy hiểm bên trái
+                </option>
+                <option value="R301a">R.301a - Hướng đi thẳng bắt buộc</option>
+                <option value="P106a">P.106a - Cấm xe ô tô tải</option>
+                <option value="error">
+                  --- Giả lập Lỗi Không Nhận Diện Được ---
+                </option>
+              </select>
+            </div>
+
+            <div id="reportArea" class="flex-grow flex flex-col justify-center">
+              <div
+                id="reportIdle"
+                class="text-center p-8 text-on-surface-variant flex flex-col items-center gap-4"
+              >
+                <span class="material-symbols-outlined text-6xl text-primary/40"
+                  >analytics</span
+                >
+                <h4 class="font-headline-md text-asphalt-ink">
+                  Báo cáo phân tích
+                </h4>
+                <p class="max-w-[320px] text-body-md text-on-surface-variant">
+                  Vui lòng hoàn tất việc chụp hoặc tải ảnh để hệ thống khởi chạy
+                  tính toán.
+                </p>
+              </div>
+
+              <div id="reportLoading" class="hidden space-y-6">
+                <div class="flex items-center gap-4 animate-pulse">
+                  <div
+                    class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-3xl text-on-surface-variant"
+                      >hourglass_empty</span
+                    >
+                  </div>
+                  <div class="flex-1 space-y-2">
+                    <div class="h-4 bg-surface-container rounded w-1/4"></div>
+                    <div class="h-6 bg-surface-container rounded w-3/4"></div>
+                  </div>
+                </div>
+                <div class="space-y-3 animate-pulse">
+                  <div class="h-4 bg-surface-container rounded w-full"></div>
+                  <div class="h-4 bg-surface-container rounded w-5/6"></div>
+                  <div class="h-4 bg-surface-container rounded w-2/3"></div>
+                </div>
+                <div
+                  class="bg-asphalt-ink text-warning-yellow p-4 rounded-xl font-mono text-xs space-y-1.5 min-h-[130px] shadow-inner overflow-hidden border border-outline/20"
+                >
+                  <div id="logLine1" class="text-white">
+                    > [SYSTEM]: Đang kết nối mô hình nhận diện...
+                  </div>
+                  <div id="logLine2" class="opacity-40">
+                    > [VISION]: Phân tách đặc trưng biên ảnh...
+                  </div>
+                  <div id="logLine3" class="opacity-40">
+                    > [MODEL]: Đối chiếu ma trận đặc trưng VN...
+                  </div>
+                  <div id="logLine4" class="opacity-40">
+                    > [RECON]: Tính toán xác suất tin cậy...
+                  </div>
+                </div>
+              </div>
+
+              <div id="reportSuccess" class="hidden flex-col h-full">
+                <div
+                  class="flex items-start justify-between border-b border-outline-variant/30 pb-4 mb-4"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      id="successIconContainer"
+                      class="flex-shrink-0 bg-surface-container p-1 rounded-xl"
+                    ></div>
+                    <div>
+                      <span
+                        id="badgeType"
+                        class="px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border"
+                        >BIỂN BÁO CẤM</span
+                      >
+                      <h3
+                        id="signName"
+                        class="font-headline-lg text-asphalt-ink mt-1 tracking-tight"
+                      >
+                        Cấm Đi Ngược Chiều
+                      </h3>
+                      <span
+                        id="signCode"
+                        class="font-mono text-xs text-secondary font-bold"
+                        >Mã: P.102</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="space-y-4 flex-grow overflow-y-auto max-h-[320px] pr-1"
+                >
+                  <div>
+                    <h4
+                      class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1.5"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >info</span
+                      >Ý nghĩa biển báo
+                    </h4>
+                    <p
+                      id="signDesc"
+                      class="text-body-md text-asphalt-ink leading-relaxed"
+                    >
+                      Đường cấm tất cả các loại xe (cơ giới và thô sơ) đi vào
+                      theo chiều đặt biển, trừ các xe được ưu tiên theo quy
+                      định.
+                    </p>
+                  </div>
+
+                  <div
+                    class="p-4 bg-error-container/30 border border-error/20 rounded-xl"
+                  >
+                    <h4
+                      class="text-xs font-bold text-error uppercase tracking-wider mb-1 flex items-center gap-1.5"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >gavel</span
+                      >Mức phạt vi phạm (Tham khảo)
+                    </h4>
+                    <p
+                      id="signPenalty"
+                      class="text-body-md text-asphalt-ink font-medium leading-relaxed"
+                    >
+                      Phạt tiền từ 3.000.000đ đến 5.000.000đ đối với người điều
+                      khiển xe ô tô đi ngược chiều đường một chiều.
+                    </p>
+                  </div>
+
+                  <div
+                    class="p-4 bg-surface-container-low border border-outline-variant/30 rounded-xl"
+                  >
+                    <h4
+                      class="text-xs font-bold text-primary uppercase tracking-wider mb-1 flex items-center gap-1.5"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >verified_user</span
+                      >Lời khuyên an toàn
+                    </h4>
+                    <p
+                      id="signTip"
+                      class="text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      Chú ý quan sát các hướng mũi tên rẽ hoặc hướng biển chỉ
+                      dẫn rẽ trước nút giao lớn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="reportError"
+                class="hidden text-center p-8 text-on-surface-variant flex flex-col items-center gap-4"
+              >
+                <span class="material-symbols-outlined text-6xl text-secondary"
+                  >warning</span
+                >
+                <h4 class="font-headline-lg text-asphalt-ink">
+                  Không nhận diện được
+                </h4>
+                <p
+                  id="errorMessage"
+                  class="max-w-[320px] text-body-md text-on-surface-variant"
+                >
+                  Không tìm thấy hoặc không xác định được hình dạng biển báo
+                  giao thông hợp lệ trong ảnh. Hãy thử chụp ảnh trực diện và rõ
+                  nét hơn.
+                </p>
+                <button
+                  id="retryAnalysisBtn"
+                  class="mt-2 py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full shadow-md flex items-center gap-2 transition-transform active:scale-95"
+                >
+                  <span class="material-symbols-outlined">replay</span> Quay lại
+                  trang chủ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <input type="file" id="imageInput" accept="image/*" class="hidden" />
+
+      <div
+        id="cameraModal"
+        class="fixed inset-0 z-50 hidden flex flex-col items-center justify-center bg-asphalt-ink/90 p-4 backdrop-blur-sm"
+      >
+        <div
+          class="relative w-full max-w-lg bg-surface rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+        >
+          <div
+            class="p-4 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-lowest"
+          >
+            <h3
+              class="font-headline-md text-asphalt-ink flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-secondary"
+                >videocam</span
+              >
+              Quét trực tiếp
+            </h3>
+            <button
+              id="closeCameraBtn"
+              class="p-2 text-on-surface-variant hover:text-asphalt-ink hover:bg-surface-container rounded-full transition-colors flex"
+            >
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+
+          <div
+            class="relative aspect-[4/3] bg-black flex items-center justify-center overflow-hidden"
+          >
+            <video
+              id="videoStream"
+              autoplay
+              playsinline
+              class="w-full h-full object-cover transform scale-x-[-1]"
+            ></video>
+            <div
+              class="absolute inset-0 border-[3px] border-dashed border-warning-yellow/50 m-8 rounded-lg pointer-events-none"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-warning-yellow to-transparent shadow-[0_0_10px_#FFD700] animate-scan"
+            ></div>
+          </div>
+
+          <div
+            class="p-6 bg-surface-container flex justify-center items-center gap-6"
+          >
+            <button
+              id="switchCameraBtn"
+              class="p-4 bg-surface-container-lowest border border-outline-variant/40 rounded-full text-asphalt-ink hover:bg-surface-container-high transition-all flex items-center justify-center active:scale-90"
+            >
+              <span class="material-symbols-outlined">flip_camera_ios</span>
+            </button>
+            <button
+              id="captureBtn"
+              class="p-5 bg-secondary hover:bg-secondary/90 rounded-full text-white shadow-xl flex items-center justify-center transition-all hover:scale-105 active:scale-95"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >photo_camera</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="scrollPrompt"
+        class="mt-16 flex items-center gap-4 animate-bounce"
+      >
+        <span
+          class="material-symbols-outlined text-secondary"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >expand_more</span
+        >
+        <span class="font-label-caps text-label-caps text-on-surface-variant"
+          >Khám phá thêm bên dưới</span
+        >
+        <span
+          class="material-symbols-outlined text-secondary"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >expand_more</span
+        >
+      </div>
+
+      <div
+        class="fixed top-1/2 -left-20 w-40 h-40 border-[20px] border-warning-yellow/10 rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="fixed bottom-1/4 -right-20 w-60 h-60 border-[30px] border-prohibitive-red/5 rounded-full pointer-events-none"
+      ></div>
+    </main>
+
+    <script>
+      // --- Static Mock Vietnamese Traffic Signs Database ---
+      const TRAFFIC_SIGNS_DB = [
+        {
+          id: "P102",
+          code: "P.102",
+          name: "Cấm đi ngược chiều",
+          type: "prohibitive",
+          typeName: "Biển báo cấm",
+          svgPath: `<svg viewBox="0 0 100 100" class="w-20 h-20">
+                    <circle cx="50" cy="50" r="45" fill="#bc0100" stroke="#fff" stroke-width="4"/>
+                    <rect x="20" y="42" width="60" height="16" fill="#fff" rx="2"/>
+                </svg>`,
+          desc: "Đường cấm tất cả các loại xe (cơ giới và thô sơ) đi vào theo chiều đặt biển, trừ các xe được ưu tiên theo quy định.",
+          penalty:
+            "Phạt tiền từ 3.000.000đ đến 5.000.000đ và tước giấy phép lái xe 1 - 3 tháng đối với ô tô; Phạt tiền từ 1.000.000đ đến 2.000.000đ đối với xe máy.",
+          tip: "Luôn chú ý biển báo một chiều đặt ở đầu các giao lộ trước khi rẽ.",
+        },
+        {
+          id: "P130",
+          code: "P.130",
+          name: "Cấm dừng xe và đỗ xe",
+          type: "prohibitive",
+          typeName: "Biển báo cấm",
+          svgPath: `<svg viewBox="0 0 100 100" class="w-20 h-20">
+                    <circle cx="50" cy="50" r="45" fill="#bc0100" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="37" fill="#0066CC"/>
+                    <line x1="24" y1="24" x2="76" y2="76" stroke="#fff" stroke-width="8"/>
+                    <line x1="76" y1="24" x2="24" y2="76" stroke="#fff" stroke-width="8"/>
+                    <line x1="24" y1="24" x2="76" y2="76" stroke="#bc0100" stroke-width="4"/>
+                    <line x1="76" y1="24" x2="24" y2="76" stroke="#bc0100" stroke-width="4"/>
+                </svg>`,
+          desc: "Nơi cấm dừng xe và đỗ xe đối với các loại xe cơ giới. Biển có hiệu lực đối với chiều xe chạy.",
+          penalty:
+            "Phạt tiền từ 400.000đ đến 600.000đ đối với hành vi dừng xe; Phạt tiền từ 800.000đ đến 1.000.000đ đối với hành vi đỗ xe sai quy định.",
+          tip: "Dừng xe là trạng thái đứng yên tạm thời. Đỗ xe là trạng thái đứng yên không giới hạn thời gian. Đừng nhầm lẫn hai định nghĩa này.",
+        },
+        {
+          id: "W201a",
+          code: "W.201a",
+          name: "Chỗ ngoặt nguy hiểm vòng bên trái",
+          type: "danger",
+          typeName: "Biển báo nguy hiểm",
+          svgPath: `<svg viewBox="0 0 100 100" class="w-20 h-20">
+                    <polygon points="50,5 95,83 5,83" fill="#FFD700" stroke="#bc0100" stroke-width="6" stroke-linejoin="round"/>
+                    <path d="M45,65 L45,50 C45,45 55,42 55,35 L55,25" fill="none" stroke="#1D1D1F" stroke-width="8" stroke-linecap="round"/>
+                    <polygon points="55,22 63,32 47,32" fill="#1D1D1F"/>
+                </svg>`,
+          desc: "Sắp tới vị trí có cung đường ngoặt gấp và nguy hiểm nghiêng về phía bên trái của làn di chuyển.",
+          penalty:
+            "Không phạt trực tiếp khi gặp biển này. Tuy nhiên, hành vi không giảm tốc độ khi ôm cua nguy hiểm có thể dẫn đến mất an toàn giao thông và bị xử lý hành vi thiếu làm chủ tốc độ.",
+          tip: "Rà nhẹ chân phanh, chủ động giảm tốc độ dưới 40km/h trước khi ôm cua trái.",
+        },
+        {
+          id: "R301a",
+          code: "R.301a",
+          name: "Hướng đi thẳng phải theo",
+          type: "mandatory",
+          typeName: "Biển hiệu lệnh",
+          svgPath: `<svg viewBox="0 0 100 100" class="w-20 h-20">
+                    <circle cx="50" cy="50" r="45" fill="#0066CC" stroke="#fff" stroke-width="4"/>
+                    <line x1="50" y1="80" x2="50" y2="25" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+                    <polygon points="50,15 38,32 62,32" fill="#fff"/>
+                </svg>`,
+          desc: "Các phương tiện lưu thông trên tuyến bắt buộc phải di chuyển đi thẳng, cấm rẽ sang các hướng khác tại điểm đặt biển báo.",
+          penalty:
+            "Phạt tiền từ 200.000đ đến 400.000đ đối với xe ô tô và 100.000đ đến 200.000đ đối với xe máy rẽ không tuân thủ hiệu lệnh.",
+          tip: "Hãy chuẩn bị chuyển dần vào làn đi thẳng sớm nếu nhận thấy sự xuất hiện của biển báo này.",
+        },
+        {
+          id: "P106a",
+          code: "P.106a",
+          name: "Cấm xe ô tô tải",
+          type: "prohibitive",
+          typeName: "Biển báo cấm",
+          svgPath: `<svg viewBox="0 0 100 100" class="w-20 h-20">
+                    <circle cx="50" cy="50" r="45" fill="#bc0100" stroke="#fff" stroke-width="4"/>
+                    <circle cx="50" cy="50" r="37" fill="#fff"/>
+                    <line x1="24" y1="24" x2="76" y2="76" stroke="#bc0100" stroke-width="8"/>
+                    <g transform="translate(30, 38) scale(0.4)" fill="#1D1D1F">
+                        <rect x="10" y="30" width="80" height="30" rx="5" />
+                        <rect x="60" y="10" width="25" height="25" rx="3" />
+                        <circle cx="25" cy="65" r="12" />
+                        <circle cx="75" cy="65" r="12" />
+                    </g>
+                </svg>`,
+          desc: "Đường cấm các loại xe ô tô tải có tải trọng hàng hóa chuyên chở lớn hơn 1.5 tấn (hoặc ghi rõ trên biển phụ) đi vào tuyến đường.",
+          penalty:
+            "Phạt tiền từ 1.000.000đ đến 2.000.000đ và tước quyền sử dụng Giấy phép lái xe từ 1 đến 3 tháng.",
+          tip: "Đối với xe bán tải có niên hạn, cần rà soát lại khối lượng chuyên chở trong Sổ đăng kiểm để chắc chắn không vi phạm.",
+        },
+      ];
+
+      // --- Core Interactions ---
+      let currentStream = null;
+      let useFrontCamera = false;
+
+      // UI Target references
+      const landingLayout = document.getElementById("landingLayout");
+      const activeWorkspace = document.getElementById("activeWorkspace");
+      const cameraModal = document.getElementById("cameraModal");
+      const videoStream = document.getElementById("videoStream");
+      const imageInput = document.getElementById("imageInput");
+      const sourceImagePreview = document.getElementById("sourceImagePreview");
+      const previewPlaceholder = document.getElementById("previewPlaceholder");
+      const scanningOverlay = document.getElementById("scanningOverlay");
+      const scanProgressBar = document.getElementById("scanProgressBar");
+      const scrollPrompt = document.getElementById("scrollPrompt");
+
+      // Dynamic State DOM references
+      const reportIdle = document.getElementById("reportIdle");
+      const reportLoading = document.getElementById("reportLoading");
+      const reportSuccess = document.getElementById("reportSuccess");
+      const reportError = document.getElementById("reportError");
+
+      // Logging targets
+      const logLine1 = document.getElementById("logLine1");
+      const logLine2 = document.getElementById("logLine2");
+      const logLine3 = document.getElementById("logLine3");
+      const logLine4 = document.getElementById("logLine4");
+
+      // 1. Image Upload trigger flow
+      document.getElementById("uploadImgBtn").addEventListener("click", () => {
+        imageInput.click();
+      });
+
+      imageInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            transitionToAnalysis(event.target.result);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // 2. Camera Capture flow
+      document
+        .getElementById("startScanBtn")
+        .addEventListener("click", async () => {
+          await initCamera();
+        });
+
+      async function initCamera() {
+        try {
+          if (currentStream) {
+            stopActiveStream();
+          }
+          const constraints = {
+            video: { facingMode: useFrontCamera ? "user" : "environment" },
+          };
+          currentStream =
+            await navigator.mediaDevices.getUserMedia(constraints);
+          videoStream.srcObject = currentStream;
+          cameraModal.classList.remove("hidden");
+        } catch (err) {
+          console.error("Lỗi khởi tạo thiết bị camera:", err);
+          alert(
+            "Không thể truy cập camera. Vui lòng kiểm tra lại quyền truy cập hoặc sử dụng tính năng tải ảnh.",
+          );
+        }
+      }
+
+      function stopActiveStream() {
+        if (currentStream) {
+          currentStream.getTracks().forEach((track) => track.stop());
+          currentStream = null;
+        }
+      }
+
+      document
+        .getElementById("closeCameraBtn")
+        .addEventListener("click", () => {
+          stopActiveStream();
+          cameraModal.classList.add("hidden");
+        });
+
+      document
+        .getElementById("switchCameraBtn")
+        .addEventListener("click", async () => {
+          useFrontCamera = !useFrontCamera;
+          if (useFrontCamera) {
+            videoStream.classList.remove("scale-x-[-1]");
+          } else {
+            videoStream.classList.add("scale-x-[-1]");
+          }
+          await initCamera();
+        });
+
+      document.getElementById("captureBtn").addEventListener("click", () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = videoStream.videoWidth || 640;
+        canvas.height = videoStream.videoHeight || 480;
+        const ctx = canvas.getContext("2d");
+
+        // Mirror frame correction when front-facing
+        if (!useFrontCamera) {
+          ctx.translate(canvas.width, 0);
+          ctx.scale(-1, 1);
+        }
+
+        ctx.drawImage(videoStream, 0, 0, canvas.width, canvas.height);
+        const dataUrl = canvas.toDataURL("image/jpeg");
+
+        stopActiveStream();
+        cameraModal.classList.add("hidden");
+        transitionToAnalysis(dataUrl);
+      });
+
+      // 3. Simulated Analysis & State Transition Engine
+      function transitionToAnalysis(imageSrc) {
+        // Adjust basic view grids
+        landingLayout.classList.add("hidden");
+        scrollPrompt.classList.add("hidden");
+        activeWorkspace.classList.remove("hidden");
+
+        // Render Preview Image
+        sourceImagePreview.src = imageSrc;
+        sourceImagePreview.classList.remove("hidden");
+        previewPlaceholder.classList.add("hidden");
+
+        // Reset reports state
+        reportIdle.classList.add("hidden");
+        reportSuccess.classList.add("hidden");
+        reportError.classList.add("hidden");
+
+        // Enable loader components
+        reportLoading.classList.remove("hidden");
+        scanningOverlay.classList.remove("hidden");
+
+        // Mock sequential console log progress and bar updating
+        logLine1.style.opacity = "1";
+        logLine1.textContent = "> [SYSTEM]: Đang kết nối mô hình nhận diện...";
+        logLine2.style.opacity = "0.3";
+        logLine3.style.opacity = "0.3";
+        logLine4.style.opacity = "0.3";
+        scanProgressBar.style.width = "10%";
+
+        setTimeout(() => {
+          logLine2.style.opacity = "1";
+          logLine2.textContent =
+            "> [VISION]: Định vị đường viền và phân lớp hình dạng...";
+          scanProgressBar.style.width = "40%";
+        }, 600);
+
+        setTimeout(() => {
+          logLine3.style.opacity = "1";
+          logLine3.textContent =
+            "> [MODEL]: Trích lọc ma trận đặc tính biển báo VN...";
+          scanProgressBar.style.width = "75%";
+        }, 1200);
+
+        setTimeout(() => {
+          logLine4.style.opacity = "1";
+          logLine4.textContent =
+            "> [RECON]: Đóng gói gói tin kết quả phân tích...";
+          scanProgressBar.style.width = "100%";
+        }, 1800);
+
+        // Final Result Resolution after 2.4s
+        setTimeout(() => {
+          scanningOverlay.classList.add("hidden");
+          reportLoading.classList.add("hidden");
+
+          const simulationSelection =
+            document.getElementById("simSelector").value;
+          let targetData = null;
+
+          if (simulationSelection === "random") {
+            const randomIndex = Math.floor(
+              Math.random() * TRAFFIC_SIGNS_DB.length,
+            );
+            targetData = TRAFFIC_SIGNS_DB[randomIndex];
+          } else if (simulationSelection === "error") {
+            targetData = null;
+          } else {
+            targetData = TRAFFIC_SIGNS_DB.find(
+              (s) => s.id === simulationSelection,
+            );
+          }
+
+          if (targetData) {
+            // Populate success card metrics
+            document.getElementById("successIconContainer").innerHTML =
+              targetData.svgPath;
+            document.getElementById("signName").textContent = targetData.name;
+            document.getElementById("signCode").textContent =
+              `Mã hiệu: ${targetData.code}`;
+            document.getElementById("signDesc").textContent = targetData.desc;
+            document.getElementById("signPenalty").textContent =
+              targetData.penalty;
+            document.getElementById("signTip").textContent = targetData.tip;
+
+            // Badging setup
+            const badge = document.getElementById("badgeType");
+            badge.textContent = targetData.typeName;
+
+            if (targetData.type === "prohibitive") {
+              badge.className =
+                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-prohibitive-red bg-prohibitive-red/10 text-secondary";
+            } else if (targetData.type === "danger") {
+              badge.className =
+                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-warning-yellow bg-warning-yellow/10 text-on-primary-container";
+            } else if (targetData.type === "mandatory") {
+              badge.className =
+                "px-2.5 py-0.5 text-xs font-bold rounded-full uppercase border border-regulatory-blue bg-regulatory-blue/10 text-regulatory-blue";
+            }
+
+            reportSuccess.classList.remove("hidden");
+            reportSuccess.classList.add("flex");
+          } else {
+            // Load Error state
+            reportError.classList.remove("hidden");
+          }
+        }, 2400);
+      }
+
+      // 4. Return/Reset Control Functions
+      function returnToHome() {
+        activeWorkspace.classList.add("hidden");
+        landingLayout.classList.remove("hidden");
+        scrollPrompt.classList.remove("hidden");
+
+        // Clear outputs
+        sourceImagePreview.classList.add("hidden");
+        sourceImagePreview.src = "";
+        previewPlaceholder.classList.remove("hidden");
+        imageInput.value = "";
+
+        reportSuccess.classList.add("hidden");
+        reportError.classList.add("hidden");
+        reportIdle.classList.remove("hidden");
+      }
+
+      document
+        .getElementById("cancelWorkspaceBtn")
+        .addEventListener("click", returnToHome);
+      document
+        .getElementById("retryAnalysisBtn")
+        .addEventListener("click", returnToHome);
+      document.getElementById("reScanBtn").addEventListener("click", () => {
+        imageInput.click();
+      });
+
+      // 5. Ambient micro-interactions
+      document.querySelectorAll(".btn-hover-effect").forEach((button) => {
+        button.addEventListener("mouseenter", () => {
+          button.classList.add("shadow-lg", "scale-102");
+        });
+        button.addEventListener("mouseleave", () => {
+          button.classList.remove("shadow-lg", "scale-102");
+        });
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        const bg = document.querySelector(".bg-pattern");
+        if (bg) {
+          const x = e.clientX / window.innerWidth;
+          const y = e.clientY / window.innerHeight;
+          bg.style.backgroundPosition = `${x * 10}px ${y * 10}px`;
+        }
+      });
+    </script>
+  </body>
+</html>
